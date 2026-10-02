@@ -206,4 +206,81 @@ document.addEventListener("DOMContentLoaded", function () {
       renderBerita(berita);
     });
   }
+
+  window.hideBerita = function () {
+    if (newsSection) {
+      newsSection.classList.add("d-none");
+
+      const kegiatanSection = document.getElementById("kegiatan");
+
+      if (kegiatanSection) {
+        kegiatanSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    }
+  };
+
+  const strukturTriggers = document.querySelectorAll(".struktur-trigger");
+  const strukturModalElement = document.getElementById("strukturModal");
+
+  const strukturModal = strukturModalElement
+    ? new bootstrap.Modal(strukturModalElement)
+    : null;
+
+  strukturTriggers.forEach((foto) => {
+    foto.addEventListener("click", function () {
+
+      const nama = this.dataset.nama;
+      const jabatan = this.dataset.jabatan;
+      const gambar = this.getAttribute("src");
+
+      document.getElementById("strukturModalNama").textContent = nama;
+
+      document.getElementById("strukturModalJabatan").textContent = jabatan;
+
+      const modalFoto = document.getElementById("strukturModalFoto");
+
+      modalFoto.src = gambar;
+      modalFoto.alt = nama;
+
+      strukturModal.show();
+    });
+  });
+
+    window.addEventListener("load", function () {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    if (newsSection) {
+      newsSection.classList.add("d-none");
+    }
+
+    window.scrollTo({
+      top: 0,
+      behavior: "instant"
+    });
+
+    history.replaceState(null, null, "#beranda");
+  });
+
+  let lastScrollTop = 0;
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
+      // Scroll ke bawah
+      navbar.classList.add("hide");
+    } else {
+      // Scroll ke atas
+      navbar.classList.remove("hide");
+    }
+
+    lastScrollTop = currentScroll;
+  });
+
 });

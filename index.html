@@ -40,12 +40,8 @@
 
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
-            <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
             <li class="nav-item"><a class="nav-link" href="#kegiatan">Kegiatan</a></li>
-            <li class="nav-item"><a class="nav-link news-trigger-link" href="#berita">Berita</a></li>
             <li class="nav-item"><a class="nav-link" href="#struktur">Struktur</a></li>
-            <li class="nav-item"><a class="nav-link" href="#benefit">Benefit</a></li>
             <li class="nav-item"><a class="nav-link" href="#achievement">Certificate</a></li>
             <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
               <a class="btn btn-light btn-sm px-3 text-danger fw-semibold" href="#kontak">Daftar</a>
@@ -103,7 +99,6 @@
               Seiring meluasnya misi kemanusiaan, wadah ini berkembang menjadi organisasi tingkat universitas pada 1992. Pada September 1995, organisasi resmi beralih status dan dikukuhkan menjadi KSR PMI Unit Universitas Pasundan. Sampai sekarang, KSR menjadi wadah mahasiswa Unpas untuk mengembangkan keterampilan kerelawanan dan mengabdi di bidang kemanusiaan.
             </p>
           </div>
-
         </div>
       </div>
     </section>
@@ -166,6 +161,12 @@
         </div>
 
         <div class="row g-4" id="daftarBerita"></div>
+
+        <div class="text-center mt-5">
+        <button type="button" class="btn btn-outline-danger px-4" onclick="hideBerita()">
+        Sembunyikan Berita 
+        </button>
+        </div>
       </div>
     </section>
 
@@ -179,9 +180,9 @@
 
         <h3 class="text-center text-danger fw-bold mt-2 mb-4" data-aos="fade-up">DPH, Dewan Pengurus Harian</h3>
         <div class="row g-4 justify-content-center mb-5">
-          <div class="col-sm-6 col-lg-3" data-aos="flip-left">
+          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
             <div class="person-card h-100">
-              <img src="img/komandan.png" class="foto" alt="Komandan KSR" />
+              <img src="img/komandan.png" class="foto struktur-trigger" alt="Naisya Dzahrani Putri" data-nama="Naisya Dzahrani Putri" data-jabatan="Komandan"  style="object-position: center 50%;"/>
               <div class="card-body text-center">
                 <h5>Komandan</h5><p>Naisya Dzahrani Putri</p>
               </div>
@@ -189,23 +190,23 @@
           </div>
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
             <div class="person-card h-100">
-              <img src="img/sekum.png" class="foto" alt="Sekretaris KSR" />
+              <img src="img/sekum.png" class="foto struktur-trigger" alt="Sheira Aulia Salsabila" data-nama="Sheira Aulia Salsabila" data-jabatan="Sekretaris"  style="object-position: center 60%;"/>
               <div class="card-body text-center">
                 <h5>Sekretaris</h5><p>Sheira Aulia Salsabila</p>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
+          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
             <div class="person-card h-100">
-              <img src="img/bendum.png" class="foto" alt="Bendahara KSR" />
+              <img src="img/bendum.png" class="foto struktur-trigger" alt="Nada Rohadatula'isy Asyikin" data-nama="Nada Rohadatula'isy Asyikin" data-jabatan="Bendahara"  style="object-position: center 70%;"/>
               <div class="card-body text-center">
                 <h5>Bendahara</h5><p>Nada Rohadatula'isy Asyikin</p>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="300">
+          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
             <div class="person-card h-100">
-              <img src="img/humas.png" class="foto" alt="Koordinator Humas KSR" />
+             <img src="img/humas.png" class="foto struktur-trigger" alt="Tiara" data-nama="Tiara" data-jabatan="Koordinator HUMAS" />
               <div class="card-body text-center">
                 <h5>Koordinator HUMAS</h5><p>Tiara</p>
               </div>
@@ -213,52 +214,75 @@
           </div>
         </div>
 
-        <h3 class="text-center text-danger fw-bold mt-5 mb-4" data-aos="fade-up">DPO, Dewan Pengurus Operasional</h3>
+        <h3 class="text-center text-danger fw-bold mt-5 mb-4" data-aos="fade-up" data-aos-delay="150  ">DPO, Dewan Pengurus Operasional</h3>
 
         <div class="row g-4 justify-content-center">
-          <div class="col-sm-6 col-lg-3" data-aos="flip-left">
+          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
             <div class="person-card h-100">
-              <img src="img/diklat.png" class="foto" alt="Koordinator Bidang DIKLAT" />
+              <img src="img/diklat.png" class="foto struktur-trigger" alt="M. Rifqi Rajif" data-nama="M. Rifqi Rajif" data-jabatan="Koordinator Bidang DIKLAT"  style="object-position: center 8%;"/>
               <div class="card-body text-center"><h5>Koordinator Bidang DIKLAT</h5><p>M. Rifqi Rajif</p></div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
+          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
             <div class="person-card h-100">
-              <img src="img/diklat1.png" class="foto" alt="Anggota Bidang DIKLAT" />
+              <img src="img/diklat1.png" class="foto struktur-trigger" alt="M. Rafa Rizkiansyah" data-nama="M. Rafa Rizkiansyah" data-jabatan="Anggota Bidang DIKLAT"  style="object-position: center 10%;"/>
               <div class="card-body text-center"><h5>Anggota Bidang DIKLAT</h5><p>M. Rafa Rizkiansyah</p></div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
+          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
             <div class="person-card h-100">
-              <img src="img/litbang.png" class="foto" alt="Koordinator Bidang LITBANG" />
+              <img src="img/litbangedit.png" class="foto struktur-trigger" alt="Ghina Nadya Aqila" data-nama="Ghina Nadya Aqila" data-jabatan="Koordinator Bidang LITBANG"  style="object-position: center 10%;"/>
               <div class="card-body text-center"><h5>Koordinator Bidang LITBANG</h5><p>Ghina Nadya Aqila</p></div>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
             <div class="person-card h-100">
-              <img src="img/litbang1.png" class="foto" alt="Anggota Bidang LITBANG" />
+              <img src="img/litbang1.png" class="foto struktur-trigger" alt="Hanina Dzikriya" data-nama="Hanina Dzikriya" data-jabatan="Anggota Bidang LITBANG"  style="object-position: center 26%;"/>
               <div class="card-body text-center"><h5>Anggota Bidang LITBANG</h5><p>Hanina Dzikriya</p></div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
+          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="300">
             <div class="person-card h-100">
-              <img src="img/ppm.png" class="foto" alt="Koordinator Bidang PPM" />
+              <img src="img/ppm.png" class="foto struktur-trigger" alt="Koordinator Bidang PPM" data-nama="Tiara Purnamasari" data-jabatan="Koordinator Bidang PPM"  style="object-position: center 7%;"/>
               <div class="card-body text-center"><h5>Koordinator Bidang PPM</h5><p>Tiara Purnamasari</p></div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
+          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="300">
             <div class="person-card h-100">
-              <img src="img/ppm1.png" class="foto" alt="Anggota Bidang PPM" />
+              <img src="img/ppm1.png" class="foto struktur-trigger" alt="Anggota Bidang PPM" data-nama="Asti Sopianti" data-jabatan="Anggota Bidang PPM"  style="object-position: center 10%;"/>
               <div class="card-body text-center"><h5>Anggota Bidang PPM</h5><p>Asti Sopianti</p></div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
+          <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="300">
             <div class="person-card h-100">
-              <img src="img/sarpras.png" class="foto" alt="Koordinator Bidang SAPRAS" />
+              <img src="img/sarpras.png" class="foto struktur-trigger" alt="Koordinator Bidang SAPRAS" data-nama="Nahiza Annida Apsari" data-jabatan="Koordinator Bidang SAPRAS"  style="object-position: center 75%;"/>
               <div class="card-body text-center"><h5>Koordinator Bidang SAPRAS</h5><p>Nahiza Annida Apsari</p></div>
             </div>
           </div>
         </div>
+        <div class="modal fade"
+        id= "strukturModal" tabindex="-1" aria-labelledby="strukturModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 id="strukturModalLabel" class="modal-title text-danger fw-bold fs-4">
+                Detail Pengurus
+              </h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img id="strukturModalFoto" src="" alt="" class="struktur-modal-foto mb-4"/>
+              <h4 id="strukturModalNama" class="fw-bold mb-2"></h4>
+              <p id="strukturModalJabatan" class="text-danger fw-semibold mb-3"></p>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-danger px-4" data-bs-dismiss="modal">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -356,7 +380,7 @@
 
     <footer class="footer text-white pt-5">
       <div class="container">
-        <div class="row g-4">
+        <div class="row g-4 justify-content-between">
           <div class="col-md-4">
             <div class="d-flex align-items-center mb-3">
               <img src="img/ksr.png" height="50" class="me-2" alt="Logo KSR PMI UNPAS" />
@@ -365,19 +389,6 @@
             <p class="small">
               Korps Sukarela PMI Unit Universitas Pasundan merupakan organisasi kemanusiaan mahasiswa yang bergerak di bidang sosial, kesehatan, dan kebencanaan.
             </p>
-          </div>
-
-          <div class="col-md-4">
-            <h5 class="fw-bold mb-3">Menu</h5>
-            <ul class="list-unstyled footer-link">
-              <li><a href="#beranda">Beranda</a></li>
-              <li><a href="#tentang">Tentang</a></li>
-              <li><a href="#kegiatan">Kegiatan</a></li>
-              <li><a class="news-trigger-link" href="#berita">Berita</a></li>
-              <li><a href="#struktur">Struktur Organisasi</a></li>
-              <li><a href="#benefit">Benefit</a></li>
-              <li><a href="#achievement">Certificate & Achievement</a></li>
-            </ul>
           </div>
 
           <div class="col-md-4">

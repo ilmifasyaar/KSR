@@ -21,22 +21,42 @@ section {
 .navbar {
   background: var(--ksr-red);
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.navbar.hide {
+  transform: translateY(-100%);
 }
 
 .navbar .nav-link {
   white-space: nowrap;
 }
 
-.nav-link.active {
-  font-weight: 700;
-  color: #fff !important;
-  border-bottom: 2px solid #fff;
+.nav-item a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+.nav-item a:hover::after {
+  width: 100%;
 }
 
 .hero {
   min-height: 100vh;
   padding-top: 120px 0 80px;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask21244%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3ccircle r='134.46788196200924' cx='1130.49' cy='724.34' stroke='rgba(255%2c 0%2c 64%2c 1)' stroke-width='1.68' stroke-dasharray='4%2c 4'%3e%3c/circle%3e%3ccircle r='90' cx='255.11' cy='872.86' fill='rgba(8%2c 175%2c 129%2c 1)'%3e%3c/circle%3e%3ccircle r='141.05922210403688' cx='1876.45' cy='387.57' stroke='rgba(35%2c 187%2c 203%2c 1)' stroke-width='1.86' stroke-dasharray='3%2c 2'%3e%3c/circle%3e%3c/g%3e%3c/svg%3e");
+  background-image: url("../img/Beranda2.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -173,13 +193,33 @@ section {
 
 .foto {
   width: 100%;
-  height: 250px;
-  object-fit: contain;
+  height: 150px;
+  object-fit: cover;
   background: #f7f7f7;
 }
 
+.struktur-trigger {
+  cursor: pointer;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.struktur-trigger:hover {
+  transform: scale(1.03);
+  filter: brightness(0.95);
+}
+
+.struktur-modal-foto {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  border-radius: 18px;
+  background: #f7f7f7;
+  padding: 1px;
+  border: 1px solid var(--ksr-border);
+}
+
 .person-card .card-body {
-  padding: 18px;
+  padding: 10px;
 }
 
 .person-card h5,

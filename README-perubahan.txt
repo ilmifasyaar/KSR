@@ -9,8 +9,5 @@ PERUBAHAN KSR PMI UNPAS
 7. Navigasi, footer, dan tombol detail berita sekarang memakai anchor section.
 8. js/script.js menangani render berita, sortir, dan modal detail berita.
 9. css/style.css ditambah styling untuk berita, struktur, benefit, sertifikat, modal, dan responsive layout.
+10. (Background Beranda) <iframe src="https://assets.pinterest.com/ext/embed.html?id=584553226683216719" height="357" width="450" frameborder="0" scrolling="no" ></iframe>
 
-CATATAN:
-File ini sengaja tidak menyertakan folder img dari repository asli. Salin index.html, css/style.css, dan js/script.js ke repository lama dan pertahankan folder img yang sudah ada.
-
-Untuk section Certificate & Achievement, repository asli yang diperiksa tidak menyediakan data sertifikat atau penghargaan. Karena itu bagian tersebut dibuat sebagai layout siap isi, tanpa mengarang nama penghargaan atau sertifikat.
