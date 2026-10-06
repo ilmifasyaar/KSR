@@ -1,3 +1,5 @@
+/* ================= GLOBAL ================= */
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,14 +20,23 @@ section {
   scroll-margin-top: 90px;
 }
 
+
+/* ================= NAVBAR ================= */
+
 .navbar {
-  background: var(--ksr-red);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
-  transition: transform 0.3s ease;
+  background: white;
+  position: fixed;
+  width: 100%;
 }
 
-.navbar.hide {
-  transform: translateY(-100%);
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background-color: var(--ksr-red);
 }
 
 .navbar .nav-link {
@@ -34,33 +45,34 @@ section {
 
 .nav-item a {
   position: relative;
-  color: white;
+  color: var(--ksr-red) !important;
   text-decoration: none;
 }
+
+
+/* Garis hover menu */
 
 .nav-item a::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: -6px;
+  left: 6px;
+  bottom: 4px;
   width: 0;
   height: 2px;
-  background-color: white;
+  background-color: var(--ksr-red);
   transition: width 0.5s ease;
 }
 
 .nav-item a:hover::after {
-  width: 100%;
+  width: 85%;
 }
+
+
+/* ================= BERANDA ================= */
 
 .hero {
   min-height: 100vh;
-  padding-top: 120px 0 80px;
-  background-image: url("../img/Beranda2.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
+  padding: 120px 0 80px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -71,18 +83,27 @@ section {
   align-items: center;
 }
 
+
+/* Judul */
+
 .hero h1 {
   font-size: 50px;
   font-weight: 800;
   max-width: 900px;
-  color: black ;
+  color: black;
 }
+
+
+/* Deskripsi */
 
 .hero p {
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   margin-top: 1rem;
   color: var(--ksr-red);
 }
+
+
+/* ================= LOGO ================= */
 
 .hero-logo-wrap {
   display: flex;
@@ -95,6 +116,9 @@ section {
   max-width: 100%;
   height: auto;
 }
+
+
+/* ================= BADGE ================= */
 
 .hero-badge,
 .section-kicker {
@@ -113,7 +137,32 @@ section {
   background: rgba(255, 255, 255, 0.8);
 }
 
-.about-card,
+
+/* ================= TENTANG ================= */
+
+.tentang {
+  padding: 0 0 100px;
+}
+
+.about-card {
+  border: 1px solid var(--ksr-border);
+  background: linear-gradient(135deg, #fff, #fff8f8);
+  border-radius: 18px;
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content p {
+  text-align: left;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+
+/* ================= CARD ================= */
+
 .join-card,
 .feature-card,
 .benefit-card,
@@ -125,10 +174,6 @@ section {
   border-radius: 18px;
 }
 
-.about-card {
-  background: linear-gradient(135deg, #fff, #fff8f8);
-}
-
 .about-logo-wrap {
   max-width: 300px;
   margin: auto;
@@ -136,6 +181,46 @@ section {
   border-radius: 24px;
   background: #fff;
   box-shadow: 0 14px 36px rgba(179, 0, 0, 0.08);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero-logo-wrap img {
+    width: 400px;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+
+  .hero {
+    padding: 110px 20px 60px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-logo-wrap img {
+    width: 300px;
+  }
+
+  .tentang {
+    padding: 80px 20px;
+  }
+
 }
 
 .feature-card,
