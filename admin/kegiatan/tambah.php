@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
                     $gambar = uniqid("kegiatan_", true) . "." . $extension;
 
-                    $uploadDir = "../../uploads/kegiatan/";
+                    $uploadDir = "../uploads/kegiatan/";
 
                     if (!is_dir($uploadDir)) {
                         mkdir($uploadDir, 0755, true);
@@ -133,9 +133,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             } catch (PDOException $e) {
 
-                if ($gambar && file_exists("../../uploads/kegiatan/" . $gambar)) {
+                if ($gambar && file_exists("../uploads/kegiatan/" . $gambar)) {
 
-                    unlink("../../uploads/kegiatan/" . $gambar);
+                    unlink("../uploads/kegiatan/" . $gambar);
 
                 }
 

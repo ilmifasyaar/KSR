@@ -50,7 +50,7 @@ try {
     if (!empty($kegiatan["gambar"])) {
 
         $file =
-            "../../uploads/kegiatan/"
+            "../uploads/kegiatan/"
             . $kegiatan["gambar"];
 
         if (file_exists($file)) {

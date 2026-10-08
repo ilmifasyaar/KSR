@@ -345,7 +345,7 @@ $kegiatan = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     <?php if (!empty($item["gambar"])): ?>
 
                                         <img
-                                            src="../../uploads/kegiatan/<?= htmlspecialchars($item["gambar"]) ?>"
+                                            src="../uploads/kegiatan/<?= htmlspecialchars($item["gambar"]) ?>"
                                             alt="<?= htmlspecialchars($item["judul"]) ?>"
                                             class="activity-image"
                                         >
