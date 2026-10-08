@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       judul: "Donor Darah Bersama Mahasiswa UNPAS",
       tanggal: "9 Desember 2025",
       date: "2025-12-09",
-      gambar: "img/berita1.jpg",
+      gambar: "assets/img/berita1.jpg",
       ringkasan: "Kegiatan donor darah sebagai bentuk kepedulian sosial.",
       konten: `
         <p>Bandung. KSR PMI Unit Universitas Pasundan kembali menyelenggarakan kegiatan Donor Darah Sukarela sebagai bentuk nyata kepedulian terhadap sesama dan dukungan terhadap ketersediaan stok darah di Palang Merah Indonesia (PMI).</p>
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
       judul: "KSR PMI UNPAS Gelar Pelatihan Vertical Rescue untuk Meningkatkan Keterampilan Relawan",
       tanggal: "17 Februari 2025",
       date: "2025-02-17",
-      gambar: "img/berita2.jpg",
+      gambar: "assets/berita2.jpg",
       ringkasan: "Pelatihan untuk meningkatkan kompetensi relawan baru.",
       konten: `
         <p>Bandung. KSR PMI Unit Universitas Pasundan melaksanakan kegiatan Pelatihan Vertical Rescue sebagai bagian dari upaya meningkatkan pengetahuan, keterampilan, dan kesiapsiagaan relawan dalam menghadapi situasi darurat pada medan vertikal.</p>
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
       judul: "KSR PMI Unit Universitas Pasundan Turun Membantu Penanganan Bencana Longsor di Cisarua",
       tanggal: "30 Januari 2026",
       date: "2026-01-30",
-      gambar: "img/berita3.jpeg",
+      gambar: "assets/berita3.jpeg",
       ringkasan: "Relawan diterjunkan untuk membantu masyarakat terdampak bencana.",
       konten: `
         <p>Cisarua. KSR PMI Unit Universitas Pasundan turut mengambil bagian dalam upaya kemanusiaan untuk membantu masyarakat yang terdampak bencana tanah longsor di wilayah Cisarua. Kegiatan ini menjadi salah satu bentuk kepedulian dan komitmen relawan mahasiswa KSR PMI UNPAS dalam membantu masyarakat ketika terjadi kondisi darurat.</p>
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
       judul: "KSR PMI UNPAS Gelar Pelatihan Water Rescue untuk Meningkatkan Kesiapsiagaan Relawan",
       tanggal: "30 Mei 2026",
       date: "2026-05-30",
-      gambar: "img/berita4.jpeg",
+      gambar: "assets/berita4.jpeg",
       ringkasan: "Pelatihan untuk meningkatkan keterampilan dan kesiapsiagaan relawan dalam menghadapi kondisi darurat di lingkungan perairan.",
       konten: `
         <p>Bandung. KSR PMI Unit Universitas Pasundan melaksanakan kegiatan Pelatihan Water Rescue sebagai bagian dari upaya meningkatkan pengetahuan, keterampilan, dan kesiapsiagaan relawan dalam menghadapi kondisi darurat di lingkungan perairan.</p>
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       judul: "KSR PMI UNPAS Siagakan Pos Medis dalam Aksi Demonstrasi Mahasiswa",
       tanggal: "29 Agustus 2025",
       date: "2025-08-29",
-      gambar: "img/berita5.jpeg",
+      gambar: "assets/berita5.jpeg",
       ringkasan: "KSR PMI UNPAS menyiagakan Pos Medis untuk dukungan pertolongan pertama dan kesiapsiagaan kesehatan.",
       konten: `
         <p>Bandung. KSR PMI Unit Universitas Pasundan turut berperan dalam kegiatan kemanusiaan dengan menyiagakan Pos Medis selama berlangsungnya aksi demonstrasi mahasiswa di lingkungan Universitas Pasundan dan sekitarnya. Pos medis disiapkan sebagai bentuk kesiapsiagaan untuk memberikan pertolongan pertama kepada peserta aksi maupun masyarakat yang membutuhkan bantuan kesehatan.</p>
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
       judul: "KSR PMI UNPAS Turun Membantu Penanganan Bencana Banjir di Bojongsoang",
       tanggal: "5 Desember 2025",
       date: "2025-12-05",
-      gambar: "img/berita6.jpg",
+      gambar: "assets/berita6.jpg",
       ringkasan: "KSR PMI UNPAS turut membantu masyarakat terdampak banjir di Bojongsoang.",
       konten: `
         <p>Bojongsoang. KSR PMI Unit Universitas Pasundan turut turun ke lokasi terdampak bencana banjir di wilayah Bojongsoang, Kabupaten Bandung, pada 5 Desember 2025. Kehadiran para relawan merupakan bentuk kepedulian dan komitmen KSR PMI UNPAS dalam membantu masyarakat yang terdampak bencana.</p>
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
       judul: "KSR PMI UNPAS Peringati Hari Anti Narkotika Internasional",
       tanggal: "26 Juni 2026",
       date: "2026-06-26",
-      gambar: "img/berita7.jpeg",
+      gambar: "assets/berita7.jpeg",
       ringkasan: "Ajakan untuk meningkatkan kesadaran mengenai bahaya penyalahgunaan narkotika dan pentingnya menjaga kesehatan.",
       konten: `
         <p>Bandung. Dalam rangka memperingati Hari Anti Narkotika Internasional (HANI), KSR PMI Unit Universitas Pasundan turut mengajak mahasiswa dan masyarakat untuk meningkatkan kesadaran mengenai pentingnya menjauhi penyalahgunaan narkotika serta menerapkan pola hidup sehat.</p>

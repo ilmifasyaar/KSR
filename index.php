@@ -1,202 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KSR PMI Unit Universitas Pasundan</title>
 
-  <title>KSR PMI Unit Universitas Pasundan</title>
+    <link rel="icon" href="assets/img/ksr.png" />
 
-  <link rel="icon" href="./img/ksr.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-  <!-- Bootstrap -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+      <div class="container">
+        <!-- Logo / Nama -->
+        <a class="navbar-brand fw-bold d-flex align-items-center text-danger" href="#beranda"> KSR PMI UNPAS </a>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
+        <!-- Tombol Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Buka navigasi">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-<body>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav mx-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link text-danger fw-semibold" href="#beranda"> Beranda </a>
+            </li>
 
-  <!-- ================= NAVBAR ================= -->
-  <nav class="navbar navbar-expand-lg bg-white fixed-top">
+            <li class="nav-item">
+              <a class="nav-link text-danger fw-semibold" href="#kegiatan"> Kegiatan </a>
+            </li>
 
-    <div class="container">
+            <li class="nav-item">
+              <a class="nav-link text-danger fw-semibold" href="#struktur"> Struktur </a>
+            </li>
 
-      <!-- Logo / Nama -->
-      <a
-        class="navbar-brand fw-bold d-flex align-items-center text-danger"
-        href="#beranda"
-      >
-        KSR PMI UNPAS
-      </a>
-
-      <!-- Tombol Mobile -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#nav"
-        aria-controls="nav"
-        aria-expanded="false"
-        aria-label="Buka navigasi"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Menu -->
-      <div class="collapse navbar-collapse" id="nav">
-
-        <ul class="navbar-nav mx-auto align-items-lg-center">
-
-          <li class="nav-item">
-            <a
-              class="nav-link text-danger fw-semibold"
-              href="#beranda"
-            >
-              Beranda
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a
-              class="nav-link text-danger fw-semibold"
-              href="#kegiatan"
-            >
-              Kegiatan
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a
-              class="nav-link text-danger fw-semibold"
-              href="#struktur"
-            >
-              Struktur
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a
-              class="nav-link text-danger fw-semibold"
-              href="#achievement"
-            >
-              Certificate
-            </a>
-          </li>
-
-        </ul>
-
+            <li class="nav-item">
+              <a class="nav-link text-danger fw-semibold" href="#achievement"> Certificate </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
 
-  </nav>
+    <!-- ================= BERANDA ================= -->
+    <section id="beranda" class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Konten kiri -->
+          <div class="col-lg-7 text-center text-lg-start">
+            <div class="hero-badge mb-3">KORPS SUKARELA PALANG MERAH INDONESIA</div>
 
+            <h1>KSR PMI Unit Universitas Pasundan</h1>
 
-  <!-- ================= BERANDA ================= -->
-  <section id="beranda" class="hero">
+            <p>Relawan Mahasiswa Bergerak Di Bidang Kemanusiaan</p>
 
-    <div class="container">
-
-      <div class="row align-items-center">
-
-        <!-- Konten kiri -->
-        <div class="col-lg-7 text-center text-lg-start">
-
-          <div class="hero-badge mb-3">
-            KORPS SUKARELA PALANG MERAH INDONESIA
+            <div class="mt-4">
+              <a href="#kontak" class="btn btn-danger btn-lg px-4 me-2"> Gabung Sekarang </a>
+            </div>
           </div>
 
-          <h1>
-            KSR PMI Unit Universitas Pasundan
-          </h1>
-
-          <p>
-            Relawan Mahasiswa Bergerak Di Bidang Kemanusiaan
-          </p>
-
-          <div class="mt-4">
-            <a
-              href="#kontak"
-              class="btn btn-danger btn-lg px-4 me-2"
-            >
-              Gabung Sekarang
-            </a>
+          <!-- Logo kanan -->
+          <div class="col-lg-5 text-center mt-5 mt-lg-0">
+            <div class="hero-logo-wrap">
+              <img src="assets/img/ksr.png" class="img-fluid" alt="Logo KSR PMI UNPAS" />
+            </div>
           </div>
-
         </div>
+      </div>
+    </section>
 
+    <!-- ================= TENTANG ================= -->
+    <section id="tentang" class="tentang">
+      <div class="container">
+        <div class="about-card shadow-sm p-4 p-lg-5" data-aos="fade-right">
+          <div class="about-content">
+            <span class="section-kicker"> Tentang Kami </span>
 
-        <!-- Logo kanan -->
-        <div class="col-lg-5 text-center mt-5 mt-lg-0">
+            <h2 class="text-danger fw-bold mb-4">KSR PMI UNPAS</h2>
 
-          <div class="hero-logo-wrap">
+            <p>
+              KSR PMI Unit Universitas Pasundan bermula dari aksi kepedulian sekelompok mahasiswa Fakultas Keguruan dan Ilmu Pendidikan (FKIP) Unpas yang gemar mendonorkan darahnya di PMI Cabang Kota Bandung. Gerakan ini diprakarsai oleh
+              Sudjatmoko hingga akhirnya resmi membentuk Keluarga Donor Darah (KDD) FKIP Unpas pada 12 Desember 1988.
+            </p>
 
-            <img
-              src="img/ksr.png"
-              class="img-fluid"
-              alt="Logo KSR PMI UNPAS"
-            >
-
+            <p class="mb-0">
+              Seiring meluasnya misi kemanusiaan, wadah ini berkembang menjadi organisasi tingkat universitas pada 1992. Pada September 1995, organisasi resmi beralih status dan dikukuhkan menjadi KSR PMI Unit Universitas Pasundan. Sampai
+              sekarang, KSR menjadi wadah mahasiswa Unpas untuk mengembangkan keterampilan kerelawanan dan mengabdi di bidang kemanusiaan.
+            </p>
           </div>
-
         </div>
-
       </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ================= TENTANG ================= -->
-  <section id="tentang" class="tentang">
-
-    <div class="container">
-
-      <div
-        class="about-card shadow-sm p-4 p-lg-5"
-        data-aos="fade-right"
-      >
-
-        <div class="about-content">
-
-          <span class="section-kicker">
-            Tentang Kami
-          </span>
-
-          <h2 class="text-danger fw-bold mb-4">
-            KSR PMI UNPAS
-          </h2>
-
-          <p>
-            KSR PMI Unit Universitas Pasundan bermula dari aksi kepedulian
-            sekelompok mahasiswa Fakultas Keguruan dan Ilmu Pendidikan (FKIP)
-            Unpas yang gemar mendonorkan darahnya di PMI Cabang Kota Bandung.
-            Gerakan ini diprakarsai oleh Sudjatmoko hingga akhirnya resmi
-            membentuk Keluarga Donor Darah (KDD) FKIP Unpas pada 12 Desember 1988.
-          </p>
-
-          <p class="mb-0">
-            Seiring meluasnya misi kemanusiaan, wadah ini berkembang menjadi
-            organisasi tingkat universitas pada 1992. Pada September 1995,
-            organisasi resmi beralih status dan dikukuhkan menjadi KSR PMI
-            Unit Universitas Pasundan. Sampai sekarang, KSR menjadi wadah
-            mahasiswa Unpas untuk mengembangkan keterampilan kerelawanan
-            dan mengabdi di bidang kemanusiaan.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-<section id="kegiatan" class="py-5 bg-light-subtle">
+    </section>
+    <section id="kegiatan" class="py-5 bg-light-subtle">
       <div class="container py-3">
         <div class="text-center mb-5" data-aos="fade-up">
           <span class="section-kicker">Aktivitas</span>
@@ -256,9 +163,7 @@
         <div class="row g-4" id="daftarBerita"></div>
 
         <div class="text-center mt-5">
-        <button type="button" class="btn btn-outline-danger px-4" onclick="hideBerita()">
-        Sembunyikan Berita 
-        </button>
+          <button type="button" class="btn btn-outline-danger px-4" onclick="hideBerita()">Sembunyikan Berita</button>
         </div>
       </div>
     </section>
@@ -275,33 +180,37 @@
         <div class="row g-4 justify-content-center mb-5">
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
             <div class="person-card h-100">
-              <img src="img/komandan.png" class="foto struktur-trigger" alt="Naisya Dzahrani Putri" data-nama="Naisya Dzahrani Putri" data-jabatan="Komandan"  style="object-position: center 50%;"/>
+              <img src="assets/img/komandan.png" class="foto struktur-trigger" alt="Naisya Dzahrani Putri" data-nama="Naisya Dzahrani Putri" data-jabatan="Komandan" style="object-position: center 50%" />
               <div class="card-body text-center">
-                <h5>Komandan</h5><p>Naisya Dzahrani Putri</p>
+                <h5>Komandan</h5>
+                <p>Naisya Dzahrani Putri</p>
               </div>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
             <div class="person-card h-100">
-              <img src="img/sekum.png" class="foto struktur-trigger" alt="Sheira Aulia Salsabila" data-nama="Sheira Aulia Salsabila" data-jabatan="Sekretaris"  style="object-position: center 60%;"/>
+              <img src="assets/img/sekum.png" class="foto struktur-trigger" alt="Sheira Aulia Salsabila" data-nama="Sheira Aulia Salsabila" data-jabatan="Sekretaris" style="object-position: center 60%" />
               <div class="card-body text-center">
-                <h5>Sekretaris</h5><p>Sheira Aulia Salsabila</p>
+                <h5>Sekretaris</h5>
+                <p>Sheira Aulia Salsabila</p>
               </div>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
             <div class="person-card h-100">
-              <img src="img/bendum.png" class="foto struktur-trigger" alt="Nada Rohadatula'isy Asyikin" data-nama="Nada Rohadatula'isy Asyikin" data-jabatan="Bendahara"  style="object-position: center 70%;"/>
+              <img src="assets/img/bendum.png" class="foto struktur-trigger" alt="Nada Rohadatula'isy Asyikin" data-nama="Nada Rohadatula'isy Asyikin" data-jabatan="Bendahara" style="object-position: center 70%" />
               <div class="card-body text-center">
-                <h5>Bendahara</h5><p>Nada Rohadatula'isy Asyikin</p>
+                <h5>Bendahara</h5>
+                <p>Nada Rohadatula'isy Asyikin</p>
               </div>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
             <div class="person-card h-100">
-             <img src="img/humas.png" class="foto struktur-trigger" alt="Tiara" data-nama="Tiara" data-jabatan="Koordinator HUMAS" />
+              <img src="assets/img/humas.png" class="foto struktur-trigger" alt="Tiara" data-nama="Tiara" data-jabatan="Koordinator HUMAS" />
               <div class="card-body text-center">
-                <h5>Koordinator HUMAS</h5><p>Tiara</p>
+                <h5>Koordinator HUMAS</h5>
+                <p>Tiara</p>
               </div>
             </div>
           </div>
@@ -312,70 +221,86 @@
         <div class="row g-4 justify-content-center">
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
             <div class="person-card h-100">
-              <img src="img/diklat.png" class="foto struktur-trigger" alt="M. Rifqi Rajif" data-nama="M. Rifqi Rajif" data-jabatan="Koordinator Bidang DIKLAT"  style="object-position: center 8%;"/>
-              <div class="card-body text-center"><h5>Koordinator Bidang DIKLAT</h5><p>M. Rifqi Rajif</p></div>
+              <img src="assets/img/diklat.png" class="foto struktur-trigger" alt="M. Rifqi Rajif" data-nama="M. Rifqi Rajif" data-jabatan="Koordinator Bidang DIKLAT" style="object-position: center 8%" />
+              <div class="card-body text-center">
+                <h5>Koordinator Bidang DIKLAT</h5>
+                <p>M. Rifqi Rajif</p>
+              </div>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
             <div class="person-card h-100">
-              <img src="img/diklat1.png" class="foto struktur-trigger" alt="M. Rafa Rizkiansyah" data-nama="M. Rafa Rizkiansyah" data-jabatan="Anggota Bidang DIKLAT"  style="object-position: center 10%;"/>
-              <div class="card-body text-center"><h5>Anggota Bidang DIKLAT</h5><p>M. Rafa Rizkiansyah</p></div>
+              <img src="assets/img/diklat1.png" class="foto struktur-trigger" alt="M. Rafa Rizkiansyah" data-nama="M. Rafa Rizkiansyah" data-jabatan="Anggota Bidang DIKLAT" style="object-position: center 10%" />
+              <div class="card-body text-center">
+                <h5>Anggota Bidang DIKLAT</h5>
+                <p>M. Rafa Rizkiansyah</p>
+              </div>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
             <div class="person-card h-100">
-              <img src="img/litbangedit.png" class="foto struktur-trigger" alt="Ghina Nadya Aqila" data-nama="Ghina Nadya Aqila" data-jabatan="Koordinator Bidang LITBANG"  style="object-position: center 10%;"/>
-              <div class="card-body text-center"><h5>Koordinator Bidang LITBANG</h5><p>Ghina Nadya Aqila</p></div>
+              <img src="assets/img/litbangedit.png" class="foto struktur-trigger" alt="Ghina Nadya Aqila" data-nama="Ghina Nadya Aqila" data-jabatan="Koordinator Bidang LITBANG" style="object-position: center 10%" />
+              <div class="card-body text-center">
+                <h5>Koordinator Bidang LITBANG</h5>
+                <p>Ghina Nadya Aqila</p>
+              </div>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
             <div class="person-card h-100">
-              <img src="img/litbang1.png" class="foto struktur-trigger" alt="Hanina Dzikriya" data-nama="Hanina Dzikriya" data-jabatan="Anggota Bidang LITBANG"  style="object-position: center 26%;"/>
-              <div class="card-body text-center"><h5>Anggota Bidang LITBANG</h5><p>Hanina Dzikriya</p></div>
+              <img src="assets/img/litbang1.png" class="foto struktur-trigger" alt="Hanina Dzikriya" data-nama="Hanina Dzikriya" data-jabatan="Anggota Bidang LITBANG" style="object-position: center 26%" />
+              <div class="card-body text-center">
+                <h5>Anggota Bidang LITBANG</h5>
+                <p>Hanina Dzikriya</p>
+              </div>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="300">
             <div class="person-card h-100">
-              <img src="img/ppm.png" class="foto struktur-trigger" alt="Koordinator Bidang PPM" data-nama="Tiara Purnamasari" data-jabatan="Koordinator Bidang PPM"  style="object-position: center 7%;"/>
-              <div class="card-body text-center"><h5>Koordinator Bidang PPM</h5><p>Tiara Purnamasari</p></div>
+              <img src="assets/img/ppm.png" class="foto struktur-trigger" alt="Koordinator Bidang PPM" data-nama="Tiara Purnamasari" data-jabatan="Koordinator Bidang PPM" style="object-position: center 7%" />
+              <div class="card-body text-center">
+                <h5>Koordinator Bidang PPM</h5>
+                <p>Tiara Purnamasari</p>
+              </div>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="300">
             <div class="person-card h-100">
-              <img src="img/ppm1.png" class="foto struktur-trigger" alt="Anggota Bidang PPM" data-nama="Asti Sopianti" data-jabatan="Anggota Bidang PPM"  style="object-position: center 10%;"/>
-              <div class="card-body text-center"><h5>Anggota Bidang PPM</h5><p>Asti Sopianti</p></div>
+              <img src="assets/img/ppm1.png" class="foto struktur-trigger" alt="Anggota Bidang PPM" data-nama="Asti Sopianti" data-jabatan="Anggota Bidang PPM" style="object-position: center 10%" />
+              <div class="card-body text-center">
+                <h5>Anggota Bidang PPM</h5>
+                <p>Asti Sopianti</p>
+              </div>
             </div>
           </div>
           <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="300">
             <div class="person-card h-100">
-              <img src="img/sarpras.png" class="foto struktur-trigger" alt="Koordinator Bidang SAPRAS" data-nama="Nahiza Annida Apsari" data-jabatan="Koordinator Bidang SAPRAS"  style="object-position: center 75%;"/>
-              <div class="card-body text-center"><h5>Koordinator Bidang SAPRAS</h5><p>Nahiza Annida Apsari</p></div>
+              <img src="assets/img/sarpras.png" class="foto struktur-trigger" alt="Koordinator Bidang SAPRAS" data-nama="Nahiza Annida Apsari" data-jabatan="Koordinator Bidang SAPRAS" style="object-position: center 75%" />
+              <div class="card-body text-center">
+                <h5>Koordinator Bidang SAPRAS</h5>
+                <p>Nahiza Annida Apsari</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="modal fade"
-        id= "strukturModal" tabindex="-1" aria-labelledby="strukturModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h2 id="strukturModalLabel" class="modal-title text-danger fw-bold fs-4">
-                Detail Pengurus
-              </h2>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
-            </div>
-            <div class="modal-body text-center">
-              <img id="strukturModalFoto" src="" alt="" class="struktur-modal-foto mb-4"/>
-              <h4 id="strukturModalNama" class="fw-bold mb-2"></h4>
-              <p id="strukturModalJabatan" class="text-danger fw-semibold mb-3"></p>
-            </div>
-            <div class="modal-footer justify-content-center">
-              <button type="button" class="btn btn-danger px-4" data-bs-dismiss="modal">
-                Close
-              </button>
+        <div class="modal fade" id="strukturModal" tabindex="-1" aria-labelledby="strukturModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 id="strukturModalLabel" class="modal-title text-danger fw-bold fs-4">Detail Pengurus</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+              </div>
+              <div class="modal-body text-center">
+                <img id="strukturModalFoto" src="" alt="" class="struktur-modal-foto mb-4" />
+                <h4 id="strukturModalNama" class="fw-bold mb-2"></h4>
+                <p id="strukturModalJabatan" class="text-danger fw-semibold mb-3"></p>
+              </div>
+              <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-danger px-4" data-bs-dismiss="modal">Close</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
 
@@ -389,22 +314,46 @@
 
         <div class="row g-4">
           <div class="col-md-6 col-lg-4" data-aos="fade-up">
-            <div class="benefit-card h-100"><i class="bi bi-heart-pulse-fill"></i><h5>Belajar Pertolongan</h5><p>Menambah wawasan dan pengalaman melalui pelatihan serta simulasi yang berkaitan dengan pertolongan dan kesiapsiagaan.</p></div>
+            <div class="benefit-card h-100">
+              <i class="bi bi-heart-pulse-fill"></i>
+              <h5>Belajar Pertolongan</h5>
+              <p>Menambah wawasan dan pengalaman melalui pelatihan serta simulasi yang berkaitan dengan pertolongan dan kesiapsiagaan.</p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="benefit-card h-100"><i class="bi bi-people-fill"></i><h5>Kerja Tim</h5><p>Terbiasa berkoordinasi, membagi tugas, dan bekerja bersama anggota lain dalam kegiatan organisasi.</p></div>
+            <div class="benefit-card h-100">
+              <i class="bi bi-people-fill"></i>
+              <h5>Kerja Tim</h5>
+              <p>Terbiasa berkoordinasi, membagi tugas, dan bekerja bersama anggota lain dalam kegiatan organisasi.</p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="benefit-card h-100"><i class="bi bi-person-arms-up"></i><h5>Kepemimpinan</h5><p>Mendapat ruang untuk berlatih mengambil tanggung jawab, mengelola kegiatan, dan memimpin tim.</p></div>
+            <div class="benefit-card h-100">
+              <i class="bi bi-person-arms-up"></i>
+              <h5>Kepemimpinan</h5>
+              <p>Mendapat ruang untuk berlatih mengambil tanggung jawab, mengelola kegiatan, dan memimpin tim.</p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up">
-            <div class="benefit-card h-100"><i class="bi bi-broadcast-pin"></i><h5>Relasi Mahasiswa</h5><p>Berinteraksi dengan mahasiswa dari berbagai latar dan membangun jaringan melalui kegiatan bersama.</p></div>
+            <div class="benefit-card h-100">
+              <i class="bi bi-broadcast-pin"></i>
+              <h5>Relasi Mahasiswa</h5>
+              <p>Berinteraksi dengan mahasiswa dari berbagai latar dan membangun jaringan melalui kegiatan bersama.</p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="benefit-card h-100"><i class="bi bi-activity"></i><h5>Pengalaman Lapangan</h5><p>Mengembangkan kesiapan menghadapi kegiatan lapangan dan kondisi yang membutuhkan ketelitian serta koordinasi.</p></div>
+            <div class="benefit-card h-100">
+              <i class="bi bi-activity"></i>
+              <h5>Pengalaman Lapangan</h5>
+              <p>Mengembangkan kesiapan menghadapi kegiatan lapangan dan kondisi yang membutuhkan ketelitian serta koordinasi.</p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="benefit-card h-100"><i class="bi bi-hand-thumbs-up-fill"></i><h5>Kontribusi Sosial</h5><p>Menggunakan waktu dan keterampilan untuk kegiatan sosial, kesehatan, dan kemanusiaan di lingkungan sekitar.</p></div>
+            <div class="benefit-card h-100">
+              <i class="bi bi-hand-thumbs-up-fill"></i>
+              <h5>Kontribusi Sosial</h5>
+              <p>Menggunakan waktu dan keterampilan untuk kegiatan sosial, kesehatan, dan kemanusiaan di lingkungan sekitar.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -456,17 +405,8 @@
         <div class="join-card text-center" data-aos="fade-up">
           <span class="section-kicker">Pendaftaran</span>
           <h2 class="text-danger fw-bold mb-3">Bergabung Bersama KSR PMI UNPAS</h2>
-          <p class="mb-4">
-            Tertarik menjadi bagian dari KSR PMI Unit Universitas Pasundan? Daftarkan diri kamu dan bergabung bersama relawan mahasiswa yang bergerak di bidang kemanusiaan, sosial, kesehatan, dan kebencanaan.
-          </p>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSd0NmgYEEZqV8JCX05g1Rwz4yFOSqBbFeIiD_z_RleGBGhLWw/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-danger btn-lg px-5"
-          >
-            Daftar Sekarang
-          </a>
+          <p class="mb-4">Tertarik menjadi bagian dari KSR PMI Unit Universitas Pasundan? Daftarkan diri kamu dan bergabung bersama relawan mahasiswa yang bergerak di bidang kemanusiaan, sosial, kesehatan, dan kebencanaan.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0NmgYEEZqV8JCX05g1Rwz4yFOSqBbFeIiD_z_RleGBGhLWw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-lg px-5"> Daftar Sekarang </a>
         </div>
       </div>
     </section>
@@ -476,12 +416,10 @@
         <div class="row g-4 justify-content-between">
           <div class="col-md-4">
             <div class="d-flex align-items-center mb-3">
-              <img src="img/ksr.png" height="50" class="me-2" alt="Logo KSR PMI UNPAS" />
+              <img src="assets/img/ksr.png" height="50" class="me-2" alt="Logo KSR PMI UNPAS" />
               <h5 class="fw-bold mb-0">KSR PMI UNPAS</h5>
             </div>
-            <p class="small">
-              Korps Sukarela PMI Unit Universitas Pasundan merupakan organisasi kemanusiaan mahasiswa yang bergerak di bidang sosial, kesehatan, dan kebencanaan.
-            </p>
+            <p class="small">Korps Sukarela PMI Unit Universitas Pasundan merupakan organisasi kemanusiaan mahasiswa yang bergerak di bidang sosial, kesehatan, dan kebencanaan.</p>
           </div>
 
           <div class="col-md-4">
@@ -525,6 +463,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/script.js"></script>
-</body>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
