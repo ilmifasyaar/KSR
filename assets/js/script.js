@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
     duration: 850,
-    once: true,
+    once: false ,
+    mirror: true
   });
 
   document.querySelectorAll(".nav-link").forEach((link) => {
@@ -10,6 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (nav && nav.classList.contains("show")) {
         bootstrap.Collapse.getOrCreateInstance(nav).hide();
       }
+    });
+  });
+
+  document.querySelectorAll('.navbar a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function () {
+      setTimeout(() => {
+        AOS.refreshHard();
+      }, 500);
     });
   });
 
@@ -277,21 +286,25 @@ document.addEventListener("DOMContentLoaded", function () {
     history.replaceState(null, null, "#beranda");
   });
 
-  let lastScrollTop = 0;
   const navbar = document.querySelector(".navbar");
+  let lastScroll = window.scrollY;
+
+  if (!navbar) {
+    console.error("Navbar tidak ditemukan!");
+    return;
+  }
 
   window.addEventListener("scroll", () => {
     const currentScroll = window.scrollY;
 
-    if (currentScroll > lastScrollTop && currentScroll > 100) {
-      // Scroll ke bawah
+    if (currentScroll > lastScroll && currentScroll > 100) {
       navbar.classList.add("hide");
     } else {
-      // Scroll ke atas
       navbar.classList.remove("hide");
     }
 
-    lastScrollTop = currentScroll;
+    lastScroll = currentScroll;
   });
+
 
 });

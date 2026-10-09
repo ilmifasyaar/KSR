@@ -22,7 +22,7 @@
   <body>
     <!-- ================= NAVBAR ================= -->
     
-  <nav class="navbar navbar-expand-lg navbar-ksr fixed-top" data-aos="fade-down" data-aos-delay="100">
+  <nav class="navbar navbar-expand-lg bg-transparent navbar-ksr fixed-top">
     <div class="container">
 
       <a class="navbar-brand d-flex align-items-center gap-2"
@@ -106,8 +106,8 @@
     <!-- ================= TENTANG ================= -->
     <section id="tentang" class="tentang">
       <div class="container">
-        <div class="about-card shadow-sm mt-4 p-4 p-lg-5" data-aos="fade-up">
-          <div class="about-content">
+        <div class="about-card shadow-sm p-4 p-lg-5" data-aos="fade-down" data-aos-delay="200">
+          <div class="about-content" >
             <span class="section-kicker"> Tentang Kami </span>
 
             <h2 class="text-danger fw-bold mb-4">KSR PMI UNPAS</h2>
@@ -125,6 +125,7 @@
         </div>
       </div>
     </section>
+
     <section id="kegiatan" class="py-5 bg-light-subtle">
       <div class="container py-3">
         <div class="text-center mb-5" data-aos="fade-up">
@@ -200,7 +201,7 @@
 
         <h3 class="text-center text-danger fw-bold mt-2 mb-4" data-aos="fade-up">DPH, Dewan Pengurus Harian</h3>
         <div class="row g-4 justify-content-center mb-5">
-          <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-sm-10 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <div class="person-card h-100">
               <img src="assets/img/komandan.png" class="foto struktur-trigger" alt="Naisya Dzahrani Putri" data-nama="Naisya Dzahrani Putri" data-jabatan="Komandan" style="object-position: center 50%" />
               <div class="card-body text-center">
@@ -209,7 +210,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-sm-10 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <div class="person-card h-100">
               <img src="assets/img/sekum.png" class="foto struktur-trigger" alt="Sheira Aulia Salsabila" data-nama="Sheira Aulia Salsabila" data-jabatan="Sekretaris" style="object-position: center 60%" />
               <div class="card-body text-center">
@@ -218,7 +219,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-sm-10 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <div class="person-card h-100">
               <img src="assets/img/bendum.png" class="foto struktur-trigger" alt="Nada Rohadatula'isy Asyikin" data-nama="Nada Rohadatula'isy Asyikin" data-jabatan="Bendahara" style="object-position: center 70%" />
               <div class="card-body text-center">
@@ -227,7 +228,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-sm-10 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <div class="person-card h-100">
               <img src="assets/img/humas.png" class="foto struktur-trigger" alt="Tiara" data-nama="Tiara" data-jabatan="Koordinator HUMAS" />
               <div class="card-body text-center">
@@ -241,7 +242,7 @@
         <h3 class="text-center text-danger fw-bold mt-5 mb-4" data-aos="fade-up" data-aos-delay="150  ">DPO, Dewan Pengurus Operasional</h3>
 
         <div class="row g-4 justify-content-center">
-          <div class="col-sm-6 col-lg-3" data-aos="fade-right" data-aos-delay="200">
+          <div class="col-sm-10 col-lg-3" data-aos="fade-right" data-aos-delay="200">
             <div class="person-card h-100">
               <img src="assets/img/diklat.png" class="foto struktur-trigger" alt="M. Rifqi Rajif" data-nama="M. Rifqi Rajif" data-jabatan="Koordinator Bidang DIKLAT" style="object-position: center 8%" />
               <div class="card-body text-center">
@@ -250,7 +251,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="fade-right" data-aos-delay="200">
+          <div class="col-sm-10 col-lg-3" data-aos="fade-right" data-aos-delay="200">
             <div class="person-card h-100">
               <img src="assets/img/diklat1.png" class="foto struktur-trigger" alt="M. Rafa Rizkiansyah" data-nama="M. Rafa Rizkiansyah" data-jabatan="Anggota Bidang DIKLAT" style="object-position: center 10%" />
               <div class="card-body text-center">
@@ -259,7 +260,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="fade-right" data-aos-delay="200">
+          <div class="col-sm-10 col-lg-3" data-aos="fade-right" data-aos-delay="200">
             <div class="person-card h-100">
               <img src="assets/img/litbangedit.png" class="foto struktur-trigger" alt="Ghina Nadya Aqila" data-nama="Ghina Nadya Aqila" data-jabatan="Koordinator Bidang LITBANG" style="object-position: center 10%" />
               <div class="card-body text-center">
@@ -268,7 +269,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="fade-right" data-aos-delay="200">
+          <div class="col-sm-10 col-lg-3" data-aos="fade-right" data-aos-delay="200">
             <div class="person-card h-100">
               <img src="assets/img/litbang1.png" class="foto struktur-trigger" alt="Hanina Dzikriya" data-nama="Hanina Dzikriya" data-jabatan="Anggota Bidang LITBANG" style="object-position: center 26%" />
               <div class="card-body text-center">
@@ -277,7 +278,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="fade-left" data-aos-delay="300">
+          <div class="col-sm-10 col-lg-3" data-aos="fade-left" data-aos-delay="300">
             <div class="person-card h-100">
               <img src="assets/img/ppm.png" class="foto struktur-trigger" alt="Koordinator Bidang PPM" data-nama="Tiara Purnamasari" data-jabatan="Koordinator Bidang PPM" style="object-position: center 7%" />
               <div class="card-body text-center">
@@ -286,7 +287,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="fade-left" data-aos-delay="300">
+          <div class="col-sm-10 col-lg-3" data-aos="fade-left" data-aos-delay="300">
             <div class="person-card h-100">
               <img src="assets/img/ppm1.png" class="foto struktur-trigger" alt="Anggota Bidang PPM" data-nama="Asti Sopianti" data-jabatan="Anggota Bidang PPM" style="object-position: center 10%" />
               <div class="card-body text-center">
@@ -295,7 +296,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-3" data-aos="fade-left" data-aos-delay="300">
+          <div class="col-sm-10 col-lg-3" data-aos="fade-left" data-aos-delay="300">
             <div class="person-card h-100">
               <img src="assets/img/sarpras.png" class="foto struktur-trigger" alt="Koordinator Bidang SAPRAS" data-nama="Nahiza Annida Apsari" data-jabatan="Koordinator Bidang SAPRAS" style="object-position: center 75%" />
               <div class="card-body text-center">
@@ -304,7 +305,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div>  
         <div class="modal fade" id="strukturModal" tabindex="-1" aria-labelledby="strukturModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
