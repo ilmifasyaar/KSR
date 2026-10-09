@@ -27,16 +27,15 @@ section {
   background: white;
   position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.5s ease;
+
 }
 
-.navbar::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 5%;
-  right: 5%;
-  height: 2px;
-  background-color: var(--ksr-red);
+.navbar.hide {
+  transform: translateY(-100%);
 }
 
 .navbar .nav-link {
@@ -64,7 +63,101 @@ section {
 }
 
 .nav-item a:hover::after {
-  width: 85%;
+  width: 70%;
+}
+
+
+
+/* NAVBAR KSR */
+.navbar-ksr {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(185, 35, 56, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* LOGO DAN BRAND */
+.navbar-ksr .navbar-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.navbar-ksr .navbar-brand {
+  color: #8f1d2c;
+  line-height: 1.1;
+}
+
+.navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.navbar-brand-text strong {
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.navbar-brand-text small {
+  color: #777;
+  font-size: 0.62rem;
+  letter-spacing: 1px;
+}
+
+/* LINK NAVBAR */
+.navbar-ksr .nav-link {
+  position: relative;
+  color: #454545 !important;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 10px 12px !important;
+  transition: color 0.5s ease;
+}
+
+.navbar-ksr .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 2px;
+  background: #c6283d;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.navbar-ksr .nav-link:hover,
+.navbar-ksr .nav-link:focus-visible {
+  color: #c6283d !important;
+}
+
+.navbar-ksr .nav-link:hover::after,
+.navbar-ksr .nav-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 991.98px) {
+  .navbar-ksr .navbar-collapse {
+    padding: 16px 0 6px;
+  }
+
+  .navbar-ksr .nav-link {
+    padding: 11px 0 !important;
+  }
+
+  .navbar-ksr .nav-link::after {
+    left: 0;
+    right: auto;
+    width: 35px;
+    bottom: 4px;
+  }
+
 }
 
 
@@ -75,14 +168,21 @@ section {
   padding: 120px 0 80px;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  overflow:hidden;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.45),
+      rgba(255, 255, 255, 0.45)
+    ),
+  url("../img/BgBeranda.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero .row {
   min-height: 70vh;
   align-items: center;
 }
-
 
 /* Judul */
 
