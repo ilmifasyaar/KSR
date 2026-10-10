@@ -67,7 +67,11 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#achievement">Achievement</a>
+            <a class="nav-link" href="#kolaborasi">Kolaborasi</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#pencapaian">Pencapaian</a>
           </li>
 
         </ul>
@@ -305,27 +309,144 @@
               </div>
             </div>
           </div>
-        </div>  
+        </div>
+
+        <!-- Panel status anggota: angka dapat diubah di konfigurasi assets/js/script.js -->
+        <div class="struktur-status-panel mt-5" data-aos="fade-up" aria-label="Status keanggotaan">
+          <div class="struktur-status-heading">
+            <span class="struktur-status-kicker"><i class="bi bi-activity me-1"></i> MEMBER STATUS</span>
+            <h3>Status Anggota</h3>
+            <p>Ringkasan keanggotaan KSR PMI Unit Universitas Pasundan.</p>
+          </div>
+          <div class="struktur-status-grid">
+            <div class="struktur-status-card status-online">
+              <span class="status-indicator" aria-hidden="true"></span>
+              <div><span class="status-label">ANGGOTA AKTIF</span><strong id="jumlahAnggotaAktif">24</strong><small><i class="bi bi-wifi me-1"></i>Active</small></div>
+            </div>
+            <div class="struktur-status-card status-offline">
+              <span class="status-indicator" aria-hidden="true"></span>
+              <div><span class="status-label">ANGGOTA NONAKTIF</span><strong id="jumlahAnggotaNonaktif">8</strong><small><i class="bi bi-moon me-1"></i>Offline</small></div>
+            </div>
+          </div>
+          <p class="struktur-status-note"><i class="bi bi-info-circle me-1"></i>Angka awal merupakan contoh dan perlu disesuaikan dengan data resmi.</p>
+        </div>
+
         <div class="modal fade" id="strukturModal" tabindex="-1" aria-labelledby="strukturModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+          <div class="modal-dialog modal-dialog-centered modal-lg struktur-modal-dialog">
+            <div class="modal-content struktur-modal-content">
               <div class="modal-header">
-                <h2 id="strukturModalLabel" class="modal-title text-danger fw-bold fs-4">Detail Pengurus</h2>
+                <div><span class="struktur-modal-eyebrow">PROFIL PENGURUS</span><h2 id="strukturModalLabel" class="modal-title text-danger fw-bold fs-4">Detail Pengurus</h2></div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
               </div>
-              <div class="modal-body text-center">
-                <img id="strukturModalFoto" src="" alt="" class="struktur-modal-foto mb-4" />
-                <h4 id="strukturModalNama" class="fw-bold mb-2"></h4>
-                <p id="strukturModalJabatan" class="text-danger fw-semibold mb-3"></p>
+              <div class="modal-body struktur-profile-layout">
+                <div class="struktur-profile-gallery">
+                  <div id="strukturFotoCarousel" class="carousel slide struktur-photo-carousel" data-bs-interval="false">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#strukturFotoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto 1"></button>
+                      <button type="button" data-bs-target="#strukturFotoCarousel" data-bs-slide-to="1" aria-label="Foto 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active"><img id="strukturModalFoto" src="" alt="" class="struktur-modal-foto" /></div>
+                      <div class="carousel-item"><img id="strukturModalFotoKedua" src="" alt="" class="struktur-modal-foto struktur-modal-foto-kedua" /></div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#strukturFotoCarousel" data-bs-slide="prev" aria-label="Foto sebelumnya"><span class="carousel-control-prev-icon" aria-hidden="true"></span></button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#strukturFotoCarousel" data-bs-slide="next" aria-label="Foto berikutnya"><span class="carousel-control-next-icon" aria-hidden="true"></span></button>
+                  </div>
+                  <div class="struktur-gallery-caption"><i class="bi bi-images me-1"></i>Geser untuk melihat foto</div>
+                </div>
+                <div class="struktur-profile-bio">
+                  <span class="struktur-bio-label">BIODATA</span>
+                  <h3 id="strukturModalNama" class="fw-bold mb-2"></h3>
+                  <p id="strukturModalJabatan" class="struktur-profile-role"></p>
+                  <div class="struktur-bio-divider"></div>
+                  <div class="struktur-bio-row"><i class="bi bi-person-badge"></i><div><span>Jabatan</span><strong id="strukturModalBidang"></strong></div></div>
+                  <div class="struktur-bio-row"><i class="bi bi-chat-square-text"></i><div><span>Tentang</span><p id="strukturModalBio"></p></div></div>
+                  <div class="struktur-bio-note"><i class="bi bi-info-circle me-1"></i><span id="strukturModalCatatan">Informasi biodata tambahan dapat dilengkapi oleh pengurus.</span></div>
+                </div>
               </div>
-              <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-danger px-4" data-bs-dismiss="modal">Close</button>
-              </div>
+              <div class="modal-footer"><button type="button" class="btn btn-danger px-4" data-bs-dismiss="modal">Tutup Profil</button></div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+       <!-- ================= KERJA SAMA ================= -->
+    <section id="kerjasama" class="kerjasama-section py-5">
+      <div class="container py-3">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-kicker">Layanan KSR</span>
+          <h2 class="text-center text-danger fw-bold">Kerja Sama</h2>
+          <p class="kerjasama-subtitle mx-auto">Kami terbuka untuk kolaborasi dan mendukung kebutuhan kegiatan kemanusiaan, kampus, maupun komunitas.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+            <article class="kerjasama-card h-100">
+              <div class="kerjasama-card-visual kerjasama-visual-media"><i class="bi bi-megaphone-fill"></i><span> COLLABORATE WITH US</span></div>
+              <div class="kerjasama-card-body">
+                <span class="kerjasama-tag">01 · Kolaborasi</span>
+                <h3>Media Partner</h3>
+                <p>Perluas jangkauan publikasi kegiatanmu bersama KSR PMI Unit Universitas Pasundan.</p>
+                <button class="btn btn-danger px-4 mt-auto" type="button" data-bs-toggle="modal" data-bs-target="#kerjasamaMediaModal">Lihat Detail <i class="bi bi-arrow-up-right ms-1"></i></button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <article class="kerjasama-card h-100">
+              <div class="kerjasama-card-visual kerjasama-visual-barang"><i class="bi bi-bag-heart-fill"></i><span> PERLENGKAPAN KEGIATAN</span></div>
+              <div class="kerjasama-card-body">
+                <span class="kerjasama-tag">02 · Peminjaman</span>
+                <h3>Peminjaman Barang</h3>
+                <p>Lihat perlengkapan yang dapat diajukan untuk mendukung acara dan kegiatanmu.</p>
+                <button class="btn btn-danger px-4 mt-auto" type="button" data-bs-toggle="modal" data-bs-target="#kerjasamaBarangModal">Lihat Katalog <i class="bi bi-arrow-up-right ms-1"></i></button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+            <article class="kerjasama-card h-100">
+              <div class="kerjasama-card-visual kerjasama-visual-permohonan"><i class="bi bi-file-earmark-check-fill"></i><span> LET'S MAKE IT HAPPEN</span></div>
+              <div class="kerjasama-card-body">
+                <span class="kerjasama-tag">03 · Pengajuan</span>
+                <h3>Permohonan</h3>
+                <p>Ajukan permohonan dukungan atau layanan KSR untuk kebutuhan kegiatanmu.</p>
+                <button class="btn btn-danger px-4 mt-auto" type="button" data-bs-toggle="modal" data-bs-target="#kerjasamaPermohonanModal">Persyaratan <i class="bi bi-arrow-up-right ms-1"></i></button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Media Partner -->
+    <div class="modal fade kerjasama-modal" id="kerjasamaMediaModal" tabindex="-1" aria-labelledby="kerjasamaMediaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+        <div class="modal-header"><h2 class="modal-title" id="kerjasamaMediaLabel">Media Partner</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
+        <div class="modal-body"><div class="kerjasama-modal-icon"><i class="bi bi-instagram"></i></div><p class="fw-semibold mb-2">Kolaborasi publikasi bersama KSR PMI UNPAS</p><p class="text-muted">Hubungi kami melalui Instagram untuk mendiskusikan bentuk kolaborasi, jadwal publikasi, dan materi promosi. Detail kerja sama akan dikonfirmasi oleh pengurus.</p><div class="kerjasama-info-row"><i class="bi bi-instagram"></i><span>@ksrunpas</span></div></div>
+        <div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Nanti</button><a class="btn btn-danger kerjasama-btn-primary" href="https://www.instagram.com/ksrunpas/" target="_blank" rel="noopener noreferrer">Kunjungi Instagram <i class="bi bi-arrow-up-right ms-1"></i></a></div>
+      </div></div>
+    </div>
+
+    <!-- Modal Katalog Peminjaman -->
+    <div class="modal fade kerjasama-modal" id="kerjasamaBarangModal" tabindex="-1" aria-labelledby="kerjasamaBarangLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"><div class="modal-content">
+        <div class="modal-header"><div><span class="kerjasama-tag">Katalog layanan</span><h2 class="modal-title" id="kerjasamaBarangLabel">Peminjaman Barang</h2></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
+        <div class="modal-body"><p class="text-muted mb-4">Daftar dan tarif berikut merupakan contoh sementara. Ketersediaan, biaya, dan ketentuan aktual perlu dikonfirmasi kepada pengurus.</p>
+          <div class="kerjasama-inventory-item"><div class="kerjasama-inventory-art art-p3k"><i class="bi bi-plus-square-fill"></i></div><div class="flex-grow-1"><h3>Perlengkapan P3K</h3><p>Perlengkapan pertolongan pertama untuk mendukung kegiatan.</p><span class="kerjasama-price">Contoh tarif: Rp10.000 / hari</span></div><button class="btn kerjasama-detail-btn" type="button" data-item="Perlengkapan P3K" data-desc="Perlengkapan pertolongan pertama untuk mendukung kegiatan." data-price="Contoh tarif: Rp10.000 / hari" data-bs-toggle="modal" data-bs-target="#kerjasamaItemModal">Detail</button></div>
+          <div class="kerjasama-inventory-item"><div class="kerjasama-inventory-art art-tandu"><i class="bi bi-bandaid-fill"></i></div><div class="flex-grow-1"><h3>Tandu</h3><p>Peralatan simulasi atau dukungan kegiatan pertolongan pertama.</p><span class="kerjasama-price">Contoh tarif: Rp25.000 / hari</span></div><button class="btn kerjasama-detail-btn" type="button" data-item="Tandu" data-desc="Peralatan simulasi atau dukungan kegiatan pertolongan pertama." data-price="Contoh tarif: Rp25.000 / hari" data-bs-toggle="modal" data-bs-target="#kerjasamaItemModal">Detail</button></div>
+          <div class="kerjasama-inventory-item"><div class="kerjasama-inventory-art art-kursi"><i class="bi bi-person-wheelchair"></i></div><div class="flex-grow-1"><h3>Kursi Roda</h3><p>Alat bantu mobilitas untuk kebutuhan kegiatan tertentu.</p><span class="kerjasama-price">Contoh tarif: Rp30.000 / hari</span></div><button class="btn kerjasama-detail-btn" type="button" data-item="Kursi Roda" data-desc="Alat bantu mobilitas untuk kebutuhan kegiatan tertentu." data-price="Contoh tarif: Rp30.000 / hari" data-bs-toggle="modal" data-bs-target="#kerjasamaItemModal">Detail</button></div>
+        </div><div class="modal-footer"><a class="btn btn-danger kerjasama-btn-primary" href="https://wa.me/6285624956109?text=Halo%20KSR%20UNPAS%2C%20saya%20ingin%20bertanya%20tentang%20peminjaman%20barang." target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp me-1"></i> Tanya Pengurus</a></div>
+      </div></div>
+    </div>
+
+    <!-- Modal Detail Item -->
+    <div class="modal fade kerjasama-modal" id="kerjasamaItemModal" tabindex="-1" aria-labelledby="kerjasamaItemLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title" id="kerjasamaItemLabel">Detail Barang</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div><div class="modal-body"><p id="kerjasamaItemDesc" class="text-muted"></p><div id="kerjasamaItemPrice" class="kerjasama-price mb-3"></div><p class="small text-muted mb-0">Tarif dan ketersediaan pada contoh ini belum resmi. Silakan konfirmasi sebelum mengajukan peminjaman.</p></div><div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button><a class="btn btn-danger kerjasama-btn-primary" href="https://wa.me/6285624956109?text=Halo%20KSR%20UNPAS%2C%20saya%20ingin%20bertanya%20tentang%20peminjaman%20barang." target="_blank" rel="noopener noreferrer">Hubungi Admin</a></div></div></div></div>
+
+    <!-- Modal Permohonan -->
+    <div class="modal fade kerjasama-modal" id="kerjasamaPermohonanModal" tabindex="-1" aria-labelledby="kerjasamaPermohonanLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title" id="kerjasamaPermohonanLabel">Permohonan Layanan</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div><div class="modal-body"><p class="text-muted">Agar pengajuan dapat ditinjau dengan jelas, siapkan informasi berikut:</p><ul class="kerjasama-requirements"><li><i class="bi bi-check-circle-fill"></i> Nama organisasi atau penanggung jawab</li><li><i class="bi bi-check-circle-fill"></i> Tujuan dan bentuk permohonan</li><li><i class="bi bi-check-circle-fill"></i> Tanggal, waktu, dan lokasi kegiatan</li><li><i class="bi bi-check-circle-fill"></i> Perkiraan peserta serta kontak aktif</li><li><i class="bi bi-check-circle-fill"></i> Surat atau dokumen pendukung jika diperlukan</li></ul><div class="kerjasama-benefit-note"><strong>Manfaatnya?</strong><p class="mb-0">Pengajuan lebih terarah, kebutuhan kegiatan dapat dipahami sejak awal, dan pengurus lebih mudah memberi konfirmasi. Persetujuan bergantung pada jenis permohonan dan ketersediaan layanan.</p></div></div><div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button><a class="btn btn-danger kerjasama-btn-primary" href="https://wa.me/6285624956109?text=Halo%20KSR%20UNPAS%2C%20saya%20ingin%20mengajukan%20permohonan%20layanan." target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp me-1"></i> Hubungi Admin</a></div></div></div></div>
+
 
     <section id="benefit" class="py-5">
       <div class="container py-3">
@@ -386,7 +507,7 @@
       <div class="container py-3">
         <div class="text-center mb-5" data-aos="fade-up">
           <span class="section-kicker">Dokumentasi</span>
-          <h2 class="text-danger fw-bold">Certificate & Achievement</h2>
+          <h2 class="text-danger fw-bold">Sertifikat & Pencapaian</h2>
           <p class="text-muted mb-0">Ruang dokumentasi sertifikat, penghargaan, dan pencapaian kegiatan KSR.</p>
         </div>
 
