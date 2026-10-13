@@ -1,3 +1,4 @@
+
 <?php
 
 require_once "../../includes/auth.php";
@@ -44,290 +45,85 @@ $stmt->execute($params);
 
 $kegiatan = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+// Pengaturan navbar
+$pageHeading = "Kegiatan";
+$pageDescription = "Kelola kegiatan KSR PMI UNPAS";
+$currentPage = "kegiatan";
+
+require_once __DIR__ . "/../assets/navbar.php";
 ?>
 
-<!DOCTYPE html>
-<html lang="id">
+<!-- CONTENT KEGIATAN -->
+<section class="content">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="content-header">
 
-    <title>Kegiatan - Admin KSR PMI UNPAS</title>
+        <div>
+            <h2>Data Kegiatan</h2>
 
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    >
+            <p>
+                Kelola data kegiatan yang ditampilkan pada website.
+            </p>
+        </div>
 
-    <link
-        rel="stylesheet"
-        href="/KSR/admin/assets/admin.css?v=2"
-    >
-</head>
+        <div class="header-actions">
 
-<body>
+            <!-- FILTER KATEGORI -->
+            <form method="GET" action="" class="category-filter">
 
-<!-- SIDEBAR -->
+                <i class="bi bi-funnel"></i>
 
-<aside class="sidebar" id="sidebar">
+                <select name="kategori" onchange="this.form.submit()">
 
-    <div class="sidebar-header">
+                    <option value="">
+                        Semua Kategori
+                    </option>
 
-        <a href="../index.php" class="sidebar-logo">
+                    <?php foreach ($kategori as $itemKategori): ?>
 
-            <img
-                src="../../assets/img/ksr.png"
-                alt="Logo KSR"
-            >
+                        <option
+                            value="<?= htmlspecialchars((string) $itemKategori['id_kategori']) ?>"
+                            <?= ($selectedKategori == $itemKategori['id_kategori']) ? 'selected' : '' ?>
+                        >
+                            <?= htmlspecialchars($itemKategori['nama_kategori']) ?>
+                        </option>
 
-            <span>KSR PMI UNPAS</span>
+                    <?php endforeach; ?>
 
-        </a>
+                </select>
+
+            </form>
+
+            <!-- TAMBAH KEGIATAN -->
+            <a href="tambah.php" class="btn-primary">
+                <i class="bi bi-plus-lg"></i>
+                Tambah Kegiatan
+            </a>
+
+        </div>
 
     </div>
 
-    <nav class="sidebar-menu">
-
-        <div class="menu-title">
-            Dashboard
-        </div>
-
-        <ul>
-
-            <li>
-                <a href="../index.php">
-                    <i class="bi bi-grid-1x2-fill"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-
-        </ul>
-
-
-        <div class="menu-title mt-4">
-            Konten Website
-        </div>
-
-        <ul>
-
-            <li>
-                <a href="../berita/index.php">
-                    <i class="bi bi-newspaper"></i>
-                    <span>Berita</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="index.php" class="active">
-                    <i class="bi bi-calendar-event"></i>
-                    <span>Kegiatan</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="../kategori/index.php">
-                    <i class="bi bi-tags"></i>
-                    <span>Kategori</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="../anggota/index.php">
-                    <i class="bi bi-people"></i>
-                    <span>Anggota</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="../struktur/index.php">
-                    <i class="bi bi-diagram-3"></i>
-                    <span>Struktur Organisasi</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="../sertifikat/index.php">
-                    <i class="bi bi-award"></i>
-                    <span>Sertifikat & Prestasi</span>
-                </a>
-            </li>
-
-        </ul>
-
-
-        <hr class="sidebar-divider">
-
-
-        <div class="menu-title">
-            Sistem
-        </div>
-
-        <ul>
-
-            <li>
-                <a href="../../index.php" target="_blank">
-                    <i class="bi bi-globe2"></i>
-                    <span>Lihat Website</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="../logout.php" class="logout-link">
-                    <i class="bi bi-box-arrow-right"></i>
-                    <span>Logout</span>
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-</aside>
-
-
-<!-- MAIN -->
-
-<main class="main-content">
-
-    <!-- TOPBAR -->
-
-    <header class="topbar">
-
-        <div class="page-title">
-
-            <button
-                class="sidebar-toggle"
-                id="sidebarToggle"
-            >
-                <i class="bi bi-list"></i>
-            </button>
-
-            <div>
-                <h1>Kegiatan</h1>
-                <span>Kelola kegiatan KSR PMI UNPAS</span>
-            </div>
-
-        </div>
-
-
-        <div class="admin-profile">
-
-            <div class="admin-avatar">
-                <?= strtoupper(substr($_SESSION["admin_nama"], 0, 1)) ?>
-            </div>
-
-            <div class="admin-info">
-
-                <strong>
-                    <?= htmlspecialchars($_SESSION["admin_nama"]) ?>
-                </strong>
-
-                <span>
-                    Administrator
-                </span>
-
-            </div>
-
-        </div>
-
-    </header>
-
-
-    <!-- CONTENT -->
-
-    <section class="content">
-
-        <div class="content-header">
-
-            <div>
-
-                <h2>
-                    Data Kegiatan
-                </h2>
-
-                <p>
-                    Kelola data kegiatan yang ditampilkan pada website.
-                </p>
-
-            </div>
-
-            <div class="header-actions">
-
-<div class="header-actions">
-
-    <form method="GET" action="" class="category-filter">
-
-        <i class="bi bi-funnel"></i>
-
-        <select name="kategori" onchange="this.form.submit()">
-
-            <option value="">
-                Semua Kategori
-            </option>
-
-            <?php foreach ($kategori as $itemKategori): ?>
-
-                <option
-                    value="<?= $itemKategori['id_kategori'] ?>"
-                    <?= ($selectedKategori == $itemKategori['id_kategori']) ? 'selected' : '' ?>
-                >
-                    <?= htmlspecialchars($itemKategori['nama_kategori']) ?>
-                </option>
-
-            <?php endforeach; ?>
-
-        </select>
-
-    </form>
-
-
-    <a
-        href="tambah.php"
-        class="btn-primary"
-    >
-        <i class="bi bi-plus-lg"></i>
-        Tambah Kegiatan
-    </a>
-
-</div>
-
-
-
-            </div>
-
-        </div>
-
-
-        <div class="table-card">
-
-            <div class="table-wrapper">
-
-                <table>
-
-                    <thead>
-
-                        <tr>
-
-                            <th>No</th>
-
-                            <th>Gambar</th>
-
-                            <th>Judul</th>
-
-                            <th>Kategori</th>
-
-                            <th>Deskripsi</th>
-
-                            <th>Tanggal</th>
-
-                            <th>Aksi</th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
+    <!-- TABEL KEGIATAN -->
+    <div class="table-card">
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Gambar</th>
+                        <th>Judul</th>
+                        <th>Kategori</th>
+                        <th>Deskripsi</th>
+                        <th>Tanggal</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody>
 
                     <?php if (count($kegiatan) > 0): ?>
 
@@ -335,11 +131,12 @@ $kegiatan = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                             <tr>
 
+                                <!-- NOMOR -->
                                 <td>
                                     <?= $index + 1 ?>
                                 </td>
 
-
+                                <!-- GAMBAR -->
                                 <td>
 
                                     <?php if (!empty($item["gambar"])): ?>
@@ -360,56 +157,42 @@ $kegiatan = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                                 </td>
 
-
+                                <!-- JUDUL -->
                                 <td>
-
                                     <div class="activity-title">
-
                                         <?= htmlspecialchars($item["judul"]) ?>
-
                                     </div>
-
                                 </td>
 
-
+                                <!-- KATEGORI -->
                                 <td>
-
                                     <span class="category-badge">
-
                                         <?= htmlspecialchars($item["nama_kategori"]) ?>
-
                                     </span>
-
                                 </td>
 
-
+                                <!-- DESKRIPSI -->
                                 <td>
-
                                     <div class="activity-description">
-
                                         <?= htmlspecialchars($item["deskripsi"]) ?>
-
                                     </div>
-
                                 </td>
 
-
+                                <!-- TANGGAL -->
                                 <td>
-
                                     <?= date(
                                         "d M Y",
                                         strtotime($item["tanggal"])
                                     ) ?>
-
                                 </td>
 
-
+                                <!-- AKSI -->
                                 <td>
 
                                     <div class="action-buttons">
 
                                         <a
-                                            href="edit.php?id=<?= $item["id"] ?>"
+                                            href="edit.php?id=<?= urlencode((string) $item["id"]) ?>"
                                             class="btn-action btn-edit"
                                             title="Edit"
                                         >
@@ -417,7 +200,7 @@ $kegiatan = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         </a>
 
                                         <a
-                                            href="hapus.php?id=<?= $item["id"] ?>"
+                                            href="hapus.php?id=<?= urlencode((string) $item["id"]) ?>"
                                             class="btn-action btn-delete"
                                             title="Hapus"
                                             onclick="return confirm('Yakin ingin menghapus kegiatan ini?')"
@@ -451,8 +234,6 @@ $kegiatan = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         Silakan tambahkan kegiatan baru.
                                     </p>
 
-
-
                                 </div>
 
                             </td>
@@ -461,38 +242,14 @@ $kegiatan = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                     <?php endif; ?>
 
-                    </tbody>
+                </tbody>
 
-                </table>
-
-            </div>
+            </table>
 
         </div>
 
-    </section>
+    </div>
 
-</main>
+</section>
 
-
-<script>
-
-const sidebarToggle =
-    document.getElementById("sidebarToggle");
-
-const sidebar =
-    document.getElementById("sidebar");
-
-if (sidebarToggle) {
-
-    sidebarToggle.addEventListener("click", function () {
-
-        sidebar.classList.toggle("show");
-
-    });
-
-}
-
-</script>
-
-</body>
-</html>
+<?php require_once __DIR__ . "/../assets/footer.php"; ?>

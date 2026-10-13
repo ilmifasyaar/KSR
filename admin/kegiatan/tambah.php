@@ -1,3 +1,4 @@
+
 <?php
 
 require_once "../../includes/auth.php";
@@ -13,7 +14,6 @@ $stmtKategori = $pdo->query("
 
 $kategori = $stmtKategori->fetchAll(PDO::FETCH_ASSOC);
 
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $judul = trim($_POST["judul"] ?? "");
@@ -23,8 +23,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $gambar = null;
 
-
-    if ($judul === "" || $deskripsi === "" || $tanggal === "" || $id_kategori <= 0) {
+    if (
+        $judul === "" ||
+        $deskripsi === "" ||
+        $tanggal === "" ||
+        $id_kategori <= 0
+    ) {
 
         $error = "Semua field wajib diisi.";
 
@@ -52,7 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $tmpName = $_FILES["gambar"]["tmp_name"];
 
                 $finfo = new finfo(FILEINFO_MIME_TYPE);
-
                 $mime = $finfo->file($tmpName);
 
                 $allowed = [
@@ -85,13 +88,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     ) {
 
                         $error = "Gagal menyimpan gambar.";
-
                         $gambar = null;
                     }
                 }
             }
         }
-
 
         /* =========================
            INSERT DATABASE
@@ -133,10 +134,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             } catch (PDOException $e) {
 
-                if ($gambar && file_exists("../uploads/kegiatan/" . $gambar)) {
-
+                if (
+                    $gambar &&
+                    file_exists("../uploads/kegiatan/" . $gambar)
+                ) {
                     unlink("../uploads/kegiatan/" . $gambar);
-
                 }
 
                 $error = "Gagal menyimpan data kegiatan.";
@@ -145,356 +147,185 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
+/* =========================
+   PENGATURAN NAVBAR
+========================= */
+
+$pageHeading = "Tambah Kegiatan";
+$pageDescription = "Tambahkan kegiatan baru";
+$currentPage = "kegiatan";
+
+require_once __DIR__ . "/../assets/navbar.php";
 ?>
 
-<!DOCTYPE html>
-<html lang="id">
+<!-- CONTENT -->
 
-<head>
+<section class="content">
 
-    <meta charset="UTF-8">
+    <div class="form-card">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+        <div class="form-card-header">
 
-    <title>Tambah Kegiatan</title>
+            <h2>
+                Form Kegiatan
+            </h2>
 
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    >
-
-    <link
-        rel="stylesheet"
-        href="/KSR/admin/assets/admin.css"
-    >
-
-</head>
-
-<body>
-
-
-<aside class="sidebar" id="sidebar">
-
-    <div class="sidebar-header">
-
-        <a href="../index.php" class="sidebar-logo">
-
-            <img
-                src="../../assets/img/ksr.png"
-                alt="Logo KSR"
+            <a
+                href="index.php"
+                class="btn-secondary"
             >
+                <i class="bi bi-arrow-left"></i>
+                Kembali
+            </a>
 
-            <span>KSR PMI UNPAS</span>
-
-        </a>
-
-    </div>
-
-    <nav class="sidebar-menu">
-
-        <div class="menu-title">
-            Dashboard
         </div>
 
-        <ul>
+        <?php if ($error): ?>
 
-            <li>
-                <a href="../index.php">
-                    <i class="bi bi-grid-1x2-fill"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
+            <div class="alert-error">
 
-        </ul>
+                <i class="bi bi-exclamation-circle"></i>
 
-        <div class="menu-title mt-4">
-            Konten Website
-        </div>
-
-        <ul>
-
-            <li>
-                <a href="../berita/index.php">
-                    <i class="bi bi-newspaper"></i>
-                    <span>Berita</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="index.php" class="active">
-                    <i class="bi bi-calendar-event"></i>
-                    <span>Kegiatan</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="../kategori/index.php">
-                    <i class="bi bi-tags"></i>
-                    <span>Kategori</span>
-                </a>
-            </li>
-
-        </ul>
-
-        <hr class="sidebar-divider">
-
-        <div class="menu-title">
-            Sistem
-        </div>
-
-        <ul>
-
-            <li>
-                <a href="../../index.php" target="_blank">
-                    <i class="bi bi-globe2"></i>
-                    <span>Lihat Website</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="../logout.php" class="logout-link">
-                    <i class="bi bi-box-arrow-right"></i>
-                    <span>Logout</span>
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-</aside>
-
-
-<main class="main-content">
-
-    <header class="topbar">
-
-        <div class="page-title">
-
-            <button
-                class="sidebar-toggle"
-                id="sidebarToggle"
-            >
-                <i class="bi bi-list"></i>
-            </button>
-
-            <div>
-
-                <h1>Tambah Kegiatan</h1>
-
-                <span>
-                    Tambahkan kegiatan baru
-                </span>
+                <?= htmlspecialchars($error, ENT_QUOTES, "UTF-8") ?>
 
             </div>
 
-        </div>
+        <?php endif; ?>
 
-    </header>
+        <form
+            method="POST"
+            enctype="multipart/form-data"
+        >
 
+            <div class="form-group">
 
-    <section class="content">
+                <label for="judul">
+                    Judul Kegiatan
+                </label>
 
-        <div class="form-card">
+                <input
+                    type="text"
+                    id="judul"
+                    name="judul"
+                    maxlength="150"
+                    value="<?= htmlspecialchars($_POST["judul"] ?? "", ENT_QUOTES, "UTF-8") ?>"
+                    placeholder="Masukkan judul kegiatan"
+                    required
+                >
 
-            <div class="form-card-header">
+            </div>
 
-                <h2>
-                    Form Kegiatan
-                </h2>
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="id_kategori">
+                        Kategori
+                    </label>
+
+                    <select
+                        id="id_kategori"
+                        name="id_kategori"
+                        required
+                    >
+
+                        <option value="">
+                            -- Pilih Kategori --
+                        </option>
+
+                        <?php foreach ($kategori as $item): ?>
+
+                            <option
+                                value="<?= htmlspecialchars((string) $item["id_kategori"], ENT_QUOTES, "UTF-8") ?>"
+                                <?= (
+                                    ($_POST["id_kategori"] ?? "") == $item["id_kategori"]
+                                ) ? "selected" : "" ?>
+                            >
+                                <?= htmlspecialchars($item["nama_kategori"], ENT_QUOTES, "UTF-8") ?>
+                            </option>
+
+                        <?php endforeach; ?>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="tanggal">
+                        Tanggal
+                    </label>
+
+                    <input
+                        type="date"
+                        id="tanggal"
+                        name="tanggal"
+                        value="<?= htmlspecialchars($_POST["tanggal"] ?? "", ENT_QUOTES, "UTF-8") ?>"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="gambar">
+                    Gambar Kegiatan
+                </label>
+
+                <input
+                    type="file"
+                    id="gambar"
+                    name="gambar"
+                    accept=".jpg,.jpeg,.png,.webp"
+                >
+
+                <small>
+                    Format JPG, PNG, WEBP. Maksimal 5MB.
+                </small>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="deskripsi">
+                    Deskripsi
+                </label>
+
+                <textarea
+                    id="deskripsi"
+                    name="deskripsi"
+                    rows="7"
+                    placeholder="Masukkan deskripsi kegiatan"
+                    required
+                ><?= htmlspecialchars($_POST["deskripsi"] ?? "", ENT_QUOTES, "UTF-8") ?></textarea>
+
+            </div>
+
+            <div class="form-actions">
 
                 <a
                     href="index.php"
                     class="btn-secondary"
                 >
-                    <i class="bi bi-arrow-left"></i>
-                    Kembali
+                    Batal
                 </a>
+
+                <button
+                    type="submit"
+                    class="btn-primary"
+                >
+                    <i class="bi bi-save"></i>
+                    Simpan Kegiatan
+                </button>
 
             </div>
 
+        </form>
 
-            <?php if ($error): ?>
+    </div>
 
-                <div class="alert-error">
+</section>
 
-                    <i class="bi bi-exclamation-circle"></i>
-
-                    <?= htmlspecialchars($error) ?>
-
-                </div>
-
-            <?php endif; ?>
-
-
-            <form
-                method="POST"
-                enctype="multipart/form-data"
-            >
-
-                <div class="form-group">
-
-                    <label for="judul">
-                        Judul Kegiatan
-                    </label>
-
-                    <input
-                        type="text"
-                        id="judul"
-                        name="judul"
-                        maxlength="150"
-                        value="<?= htmlspecialchars($_POST["judul"] ?? "") ?>"
-                        placeholder="Masukkan judul kegiatan"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-row">
-
-                    <div class="form-group">
-
-                        <label for="id_kategori">
-                            Kategori
-                        </label>
-
-                        <select
-                            id="id_kategori"
-                            name="id_kategori"
-                            required
-                        >
-
-                            <option value="">
-                                -- Pilih Kategori --
-                            </option>
-
-                            <?php foreach ($kategori as $item): ?>
-
-                                <option
-                                    value="<?= $item["id_kategori"] ?>"
-                                    <?= (
-                                        ($_POST["id_kategori"] ?? "") == $item["id_kategori"]
-                                    ) ? "selected" : "" ?>
-                                >
-
-                                    <?= htmlspecialchars($item["nama_kategori"]) ?>
-
-                                </option>
-
-                            <?php endforeach; ?>
-
-                        </select>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="tanggal">
-                            Tanggal
-                        </label>
-
-                        <input
-                            type="date"
-                            id="tanggal"
-                            name="tanggal"
-                            value="<?= htmlspecialchars($_POST["tanggal"] ?? "") ?>"
-                            required
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="gambar">
-                        Gambar Kegiatan
-                    </label>
-
-                    <input
-                        type="file"
-                        id="gambar"
-                        name="gambar"
-                        accept=".jpg,.jpeg,.png,.webp"
-                    >
-
-                    <small>
-                        Format JPG, PNG, WEBP. Maksimal 5MB.
-                    </small>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="deskripsi">
-                        Deskripsi
-                    </label>
-
-                    <textarea
-                        id="deskripsi"
-                        name="deskripsi"
-                        rows="7"
-                        placeholder="Masukkan deskripsi kegiatan"
-                        required
-                    ><?= htmlspecialchars($_POST["deskripsi"] ?? "") ?></textarea>
-
-                </div>
-
-
-                <div class="form-actions">
-
-                    <a
-                        href="index.php"
-                        class="btn-secondary"
-                    >
-                        Batal
-                    </a>
-
-                    <button
-                        type="submit"
-                        class="btn-primary"
-                    >
-                        <i class="bi bi-save"></i>
-                        Simpan Kegiatan
-                    </button>
-
-                </div>
-
-            </form>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<script>
-
-const sidebarToggle =
-    document.getElementById("sidebarToggle");
-
-const sidebar =
-    document.getElementById("sidebar");
-
-if (sidebarToggle) {
-
-    sidebarToggle.addEventListener("click", function () {
-
-        sidebar.classList.toggle("show");
-
-    });
-
-}
-
-</script>
-
-</body>
-</html>
+<?php require_once __DIR__ . "/../assets/footer.php"; ?>
