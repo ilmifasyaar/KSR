@@ -22,30 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-<<<<<<< HEAD
-  const newsSection = document.getElementById('berita');
-  const newsTriggers = document.querySelectorAll('.news-trigger, .news-trigger-link');
-
-  function tampilkanBerita(event) {
-    if (event) event.preventDefault();
-    if (!newsSection) return;
-
-    newsSection.classList.remove('d-none');
-
-    requestAnimationFrame(() => {
-      const offset = 88;
-      const top = newsSection.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-      if (window.AOS) AOS.refresh();
-    });
-  }
-
-  newsTriggers.forEach((trigger) => {
-    trigger.addEventListener('click', tampilkanBerita);
-  });
-=======
   // Berita dirender hanya pada halaman berita-kegiatan.php.
->>>>>>> ab1799a (Revisi UI)
 
   const dataBerita = {
     1: {
@@ -229,32 +206,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-<<<<<<< HEAD
-  window.hideBerita = function () {
-    if (!newsSection) return;
-
-    // Sembunyikan hanya section berita
-    newsSection.classList.add('d-none');
-
-    // Hitung ulang posisi elemen setelah layout berubah
-    requestAnimationFrame(() => {
-      if (window.AOS && typeof AOS.refreshHard === 'function') {
-        AOS.refreshHard();
-      }
-
-      // Kembali ke section kegiatan
-      const kegiatanSection = document.getElementById('kegiatan');
-
-      if (kegiatanSection) {
-        kegiatanSection.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      }
-    });
-  };
-=======
->>>>>>> ab1799a (Revisi UI)
 
   // Angka anggota dikelola manual di sini. Ganti dengan data resmi saat tersedia.
   const strukturMemberCount = { aktif: 24, nonaktif: 8 };
@@ -319,39 +270,6 @@ document.addEventListener('DOMContentLoaded', function () {
       history.scrollRestoration = 'manual';
     }
 
-<<<<<<< HEAD
-    if (newsSection) {
-      newsSection.classList.add('d-none');
-    }
-
-    window.scrollTo({
-      top: 0,
-      behavior: 'instant',
-    });
-
-    history.replaceState(null, null, '#beranda');
-  });
-
-  const navbar = document.querySelector('.navbar');
-  let lastScroll = window.scrollY;
-
-  if (!navbar) {
-    console.error('Navbar tidak ditemukan!');
-    return;
-  }
-
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-
-    if (currentScroll > lastScroll && currentScroll > 100) {
-      navbar.classList.add('hide');
-    } else {
-      navbar.classList.remove('hide');
-    }
-
-    lastScroll = currentScroll;
-  });
-=======
     // Hanya reset posisi/fragment ketika halaman beranda sedang dibuka.
     if (document.getElementById('beranda')) {
       window.scrollTo({ top: 0, behavior: 'instant' });
@@ -434,5 +352,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
->>>>>>> ab1799a (Revisi UI)
 });

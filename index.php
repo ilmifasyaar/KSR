@@ -22,11 +22,7 @@
   <body>
     <!-- ================= NAVBAR ================= -->
     
-<<<<<<< HEAD
-  <nav class="navbar navbar-expand-lg bg-transparent navbar-ksr fixed-top">
-=======
   <nav class="navbar navbar-expand-lg navbar-ksr fixed-top">
->>>>>>> ab1799a (Revisi UI)
     <div class="container">
 
       <a class="navbar-brand d-flex align-items-center gap-2"
@@ -71,19 +67,11 @@
           </li>
 
           <li class="nav-item">
-<<<<<<< HEAD
-            <a class="nav-link" href="#kolaborasi">Kolaborasi</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#pencapaian">Pencapaian</a>
-=======
             <a class="nav-link" href="#birokrasi">Birokrasi</a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="#achievement">Pencapaian</a>
->>>>>>> ab1799a (Revisi UI)
           </li>
 
         </ul>
@@ -104,15 +92,9 @@
 
             <p>Relawan Mahasiswa Bergerak Di Bidang Kemanusiaan</p>
 
-<<<<<<< HEAD
-            <div class="mt-4">
-              <a href="#kontak" class="btn btn-danger btn-lg px-4 me-2"> Gabung Sekarang </a>
-            </div>
-=======
             <!-- <div class="mt-4"> 
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0NmgYEEZqV8JCX05g1Rwz4yFOSqBbFeIiD_z_RleGBGhLWw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-lg px-4 me-2"> Gabung Sekarang </a>
             </div> -->
->>>>>>> ab1799a (Revisi UI)
           </div>
 
           <!-- Logo kanan -->
@@ -135,23 +117,12 @@
             <h2 class="text-danger fw-bold mb-4">KSR PMI UNPAS</h2>
 
             <p>
-<<<<<<< HEAD
-              KSR PMI Unit Universitas Pasundan bermula dari aksi kepedulian sekelompok mahasiswa Fakultas Keguruan dan Ilmu Pendidikan (FKIP) Unpas yang gemar mendonorkan darahnya di PMI Cabang Kota Bandung. Gerakan ini diprakarsai oleh
-              Sudjatmoko hingga akhirnya resmi membentuk Keluarga Donor Darah (KDD) FKIP Unpas pada 12 Desember 1988.
-            </p>
-
-            <p class="mb-0">
-              Seiring meluasnya misi kemanusiaan, wadah ini berkembang menjadi organisasi tingkat universitas pada 1992. Pada September 1995, organisasi resmi beralih status dan dikukuhkan menjadi KSR PMI Unit Universitas Pasundan. Sampai
-              sekarang, KSR menjadi wadah mahasiswa Unpas untuk mengembangkan keterampilan kerelawanan dan mengabdi di bidang kemanusiaan.
-            </p>
-=======
               KSR PMI Unit Universitas Pasundan tumbuh dari gerakan mahasiswa yang memiliki kepedulian terhadap donor darah dan kemanusiaan. Berawal dari Keluarga Donor Darah (KDD) FKIP Unpas pada 12 Desember 1988, organisasi ini berkembang menjadi wadah kerelawanan di tingkat universitas.
             </p>
             <p class="mb-4">
               Kini, KSR PMI UNPAS menjadi ruang bagi mahasiswa untuk belajar, mengembangkan keterampilan, dan mengabdi kepada masyarakat melalui kegiatan sosial, kesehatan, serta kebencanaan.
             </p>
             <a href="tentang.php" class="btn btn-outline-danger px-4">Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i></a>
->>>>>>> ab1799a (Revisi UI)
           </div>
         </div>
       </div>
@@ -191,37 +162,7 @@
 
         <div class="text-center mt-5" data-aos="fade-up">
           <p class="text-muted mb-3">Ingin melihat informasi dan kegiatan terbaru KSR?</p>
-<<<<<<< HEAD
-          <button type="button" class="btn btn-danger px-4 news-trigger">More Information</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="berita" class="py-5 d-none">
-      <div class="container py-3">
-        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3 mb-4" data-aos="fade-up">
-          <div>
-            <span class="section-kicker">Informasi</span>
-            <h2 class="text-danger fw-bold mb-2">Berita & Kegiatan</h2>
-            <p class="text-muted mb-0">Informasi, kegiatan, dan kabar terbaru KSR PMI Unit Universitas Pasundan.</p>
-          </div>
-          <div class="news-filter">
-            <label for="sortBerita" class="form-label fw-semibold mb-1">Urutkan berita</label>
-            <select id="sortBerita" class="form-select">
-              <option value="default">Urutan Default</option>
-              <option value="terbaru">Terbaru → Terlama</option>
-              <option value="terlama">Terlama → Terbaru</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="row g-4" id="daftarBerita"></div>
-
-        <div class="text-center mt-5">
-          <button type="button" class="btn btn-outline-danger px-4" onclick="hideBerita()">Sembunyikan Berita</button>
-=======
           <a href="berita-kegiatan.php" class="btn btn-danger px-4">More Information <i class="bi bi-arrow-up-right ms-1"></i></a>
->>>>>>> ab1799a (Revisi UI)
         </div>
       </div>
     </section>
@@ -238,11 +179,7 @@
         <div class="row g-4 justify-content-center mb-5">
           <div class="col-sm-10 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <div class="person-card h-100">
-<<<<<<< HEAD
-              <img src="assets/img/komandan.png" class="foto struktur-trigger" alt="Naisya Dzahrani Putri" data-nama="Naisya Dzahrani Putri" data-jabatan="Komandan" style="object-position: center 50%" />
-=======
               <img src="assets/img/komandan.png" class="foto struktur-trigger" alt="Naisya Dzahrani Putri" data-nama="Naisya Dzahrani Putri" data-jabatan="Komandan" data-foto-kedua="assets/img/Komandan2.jpg" style="object-position: center 50%" />
->>>>>>> ab1799a (Revisi UI)
               <div class="card-body text-center">
                 <h5>Komandan</h5>
                 <p>Naisya Dzahrani Putri</p>
@@ -251,11 +188,7 @@
           </div>
           <div class="col-sm-10 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <div class="person-card h-100">
-<<<<<<< HEAD
-              <img src="assets/img/sekum.png" class="foto struktur-trigger" alt="Sheira Aulia Salsabila" data-nama="Sheira Aulia Salsabila" data-jabatan="Sekretaris" style="object-position: center 60%" />
-=======
               <img src="assets/img/sekum.png" class="foto struktur-trigger" alt="Sheira Aulia Salsabila" data-nama="Sheira Aulia Salsabila" data-jabatan="Sekretaris" data-foto-kedua="assets/img/Sekum2.jpg"style="object-position: center 60%" />
->>>>>>> ab1799a (Revisi UI)
               <div class="card-body text-center">
                 <h5>Sekretaris</h5>
                 <p>Sheira Aulia Salsabila</p>
@@ -264,11 +197,7 @@
           </div>
           <div class="col-sm-10 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <div class="person-card h-100">
-<<<<<<< HEAD
-              <img src="assets/img/bendum.png" class="foto struktur-trigger" alt="Nada Rohadatula'isy Asyikin" data-nama="Nada Rohadatula'isy Asyikin" data-jabatan="Bendahara" style="object-position: center 70%" />
-=======
               <img src="assets/img/bendum.png" class="foto struktur-trigger" alt="Nada Rohadatula'isy Asyikin" data-nama="Nada Rohadatula'isy Asyikin" data-jabatan="Bendahara" data-foto-kedua="assets/img/Bendum2.jpg" style="object-position: center 70%" />
->>>>>>> ab1799a (Revisi UI)
               <div class="card-body text-center">
                 <h5>Bendahara</h5>
                 <p>Nada Rohadatula'isy Asyikin</p>
@@ -277,11 +206,7 @@
           </div>
           <div class="col-sm-10 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <div class="person-card h-100">
-<<<<<<< HEAD
-              <img src="assets/img/humas.png" class="foto struktur-trigger" alt="Tiara" data-nama="Tiara" data-jabatan="Koordinator HUMAS" />
-=======
               <img src="assets/img/humas.png" class="foto struktur-trigger" alt="Tiara" data-nama="Tiara" data-foto-kedua="assets/img/Humas2.jpg" data-jabatan="Koordinator HUMAS" />
->>>>>>> ab1799a (Revisi UI)
               <div class="card-body text-center">
                 <h5>Koordinator HUMAS</h5>
                 <p>Tiara</p>
@@ -295,11 +220,7 @@
         <div class="row g-4 justify-content-center">
           <div class="col-sm-10 col-lg-3" data-aos="fade-right" data-aos-delay="200">
             <div class="person-card h-100">
-<<<<<<< HEAD
-              <img src="assets/img/diklat.png" class="foto struktur-trigger" alt="M. Rifqi Rajif" data-nama="M. Rifqi Rajif" data-jabatan="Koordinator Bidang DIKLAT" style="object-position: center 8%" />
-=======
               <img src="assets/img/diklat.png" class="foto struktur-trigger" alt="M. Rifqi Rajif" data-nama="M. Rifqi Rajif" data-jabatan="Koordinator Bidang DIKLAT" data-foto-kedua="assets/img/Diklat2a.jpg" style="object-position: center 8%" />
->>>>>>> ab1799a (Revisi UI)
               <div class="card-body text-center">
                 <h5>Koordinator Bidang DIKLAT</h5>
                 <p>M. Rifqi Rajif</p>
@@ -308,11 +229,7 @@
           </div>
           <div class="col-sm-10 col-lg-3" data-aos="fade-right" data-aos-delay="200">
             <div class="person-card h-100">
-<<<<<<< HEAD
-              <img src="assets/img/diklat1.png" class="foto struktur-trigger" alt="M. Rafa Rizkiansyah" data-nama="M. Rafa Rizkiansyah" data-jabatan="Anggota Bidang DIKLAT" style="object-position: center 10%" />
-=======
               <img src="assets/img/diklat1.png" class="foto struktur-trigger" alt="M. Rafa Rizkiansyah" data-nama="M. Rafa Rizkiansyah" data-jabatan="Anggota Bidang DIKLAT" data-foto-kedua="assets/img/Diklat2b.jpg" style="object-position: center 10%" />
->>>>>>> ab1799a (Revisi UI)
               <div class="card-body text-center">
                 <h5>Anggota Bidang DIKLAT</h5>
                 <p>M. Rafa Rizkiansyah</p>
@@ -321,11 +238,7 @@
           </div>
           <div class="col-sm-10 col-lg-3" data-aos="fade-right" data-aos-delay="200">
             <div class="person-card h-100">
-<<<<<<< HEAD
-              <img src="assets/img/litbangedit.png" class="foto struktur-trigger" alt="Ghina Nadya Aqila" data-nama="Ghina Nadya Aqila" data-jabatan="Koordinator Bidang LITBANG" style="object-position: center 10%" />
-=======
               <img src="assets/img/litbangedit.png" class="foto struktur-trigger" alt="Ghina Nadya Aqila" data-nama="Ghina Nadya Aqila" data-jabatan="Koordinator Bidang LITBANG" data-foto-kedua="assets/img/Litbang2a.jpg" style="object-position: center 10%" />
->>>>>>> ab1799a (Revisi UI)
               <div class="card-body text-center">
                 <h5>Koordinator Bidang LITBANG</h5>
                 <p>Ghina Nadya Aqila</p>
@@ -334,11 +247,7 @@
           </div>
           <div class="col-sm-10 col-lg-3" data-aos="fade-right" data-aos-delay="200">
             <div class="person-card h-100">
-<<<<<<< HEAD
-              <img src="assets/img/litbang1.png" class="foto struktur-trigger" alt="Hanina Dzikriya" data-nama="Hanina Dzikriya" data-jabatan="Anggota Bidang LITBANG" style="object-position: center 26%" />
-=======
               <img src="assets/img/litbang1.png" class="foto struktur-trigger" alt="Hanina Dzikriya" data-nama="Hanina Dzikriya" data-jabatan="Anggota Bidang LITBANG" data-foto-kedua="assets/img/Litbang2b.jpg" style="object-position: center 26%" />
->>>>>>> ab1799a (Revisi UI)
               <div class="card-body text-center">
                 <h5>Anggota Bidang LITBANG</h5>
                 <p>Hanina Dzikriya</p>
@@ -347,11 +256,7 @@
           </div>
           <div class="col-sm-10 col-lg-3" data-aos="fade-left" data-aos-delay="300">
             <div class="person-card h-100">
-<<<<<<< HEAD
-              <img src="assets/img/ppm.png" class="foto struktur-trigger" alt="Koordinator Bidang PPM" data-nama="Tiara Purnamasari" data-jabatan="Koordinator Bidang PPM" style="object-position: center 7%" />
-=======
               <img src="assets/img/ppm.png" class="foto struktur-trigger" alt="Koordinator Bidang PPM" data-nama="Tiara Purnamasari" data-jabatan="Koordinator Bidang PPM" data-foto-kedua="assets/img/Bppm2a.jpg" style="object-position: center 7%" />
->>>>>>> ab1799a (Revisi UI)
               <div class="card-body text-center">
                 <h5>Koordinator Bidang PPM</h5>
                 <p>Tiara Purnamasari</p>
@@ -360,11 +265,7 @@
           </div>
           <div class="col-sm-10 col-lg-3" data-aos="fade-left" data-aos-delay="300">
             <div class="person-card h-100">
-<<<<<<< HEAD
-              <img src="assets/img/ppm1.png" class="foto struktur-trigger" alt="Anggota Bidang PPM" data-nama="Asti Sopianti" data-jabatan="Anggota Bidang PPM" style="object-position: center 10%" />
-=======
               <img src="assets/img/ppm1.png" class="foto struktur-trigger" alt="Anggota Bidang PPM" data-nama="Asti Sopianti" data-jabatan="Anggota Bidang PPM" data-foto-kedua="assets/img/Bppm2b.jpg" style="object-position: center 10%" />
->>>>>>> ab1799a (Revisi UI)
               <div class="card-body text-center">
                 <h5>Anggota Bidang PPM</h5>
                 <p>Asti Sopianti</p>
@@ -373,11 +274,7 @@
           </div>
           <div class="col-sm-10 col-lg-3" data-aos="fade-left" data-aos-delay="300">
             <div class="person-card h-100">
-<<<<<<< HEAD
-              <img src="assets/img/sarpras.png" class="foto struktur-trigger" alt="Koordinator Bidang SAPRAS" data-nama="Nahiza Annida Apsari" data-jabatan="Koordinator Bidang SAPRAS" style="object-position: center 75%" />
-=======
               <img src="assets/img/sarpras.png" class="foto struktur-trigger" alt="Koordinator Bidang SAPRAS" data-nama="Nahiza Annida Apsari" data-jabatan="Koordinator Bidang SAPRAS" data-foto-kedua="assets/img/Sarpras2.jpg" style="object-position: center 75%" />
->>>>>>> ab1799a (Revisi UI)
               <div class="card-body text-center">
                 <h5>Koordinator Bidang SAPRAS</h5>
                 <p>Nahiza Annida Apsari</p>
@@ -446,51 +343,6 @@
       </div>
     </section>
 
-<<<<<<< HEAD
-       <!-- ================= KERJA SAMA ================= -->
-    <section id="kerjasama" class="kerjasama-section py-5">
-      <div class="container py-3">
-        <div class="text-center mb-5" data-aos="fade-up">
-          <span class="section-kicker">Layanan KSR</span>
-          <h2 class="text-center text-danger fw-bold">Kerja Sama</h2>
-          <p class="kerjasama-subtitle mx-auto">Kami terbuka untuk kolaborasi dan mendukung kebutuhan kegiatan kemanusiaan, kampus, maupun komunitas.</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
-            <article class="kerjasama-card h-100">
-              <div class="kerjasama-card-visual kerjasama-visual-media"><i class="bi bi-megaphone-fill"></i><span> COLLABORATE WITH US</span></div>
-              <div class="kerjasama-card-body">
-                <span class="kerjasama-tag">01 · Kolaborasi</span>
-                <h3>Media Partner</h3>
-                <p>Perluas jangkauan publikasi kegiatanmu bersama KSR PMI Unit Universitas Pasundan.</p>
-                <button class="btn btn-danger px-4 mt-auto" type="button" data-bs-toggle="modal" data-bs-target="#kerjasamaMediaModal">Lihat Detail <i class="bi bi-arrow-up-right ms-1"></i></button>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
-            <article class="kerjasama-card h-100">
-              <div class="kerjasama-card-visual kerjasama-visual-barang"><i class="bi bi-bag-heart-fill"></i><span> PERLENGKAPAN KEGIATAN</span></div>
-              <div class="kerjasama-card-body">
-                <span class="kerjasama-tag">02 · Peminjaman</span>
-                <h3>Peminjaman Barang</h3>
-                <p>Lihat perlengkapan yang dapat diajukan untuk mendukung acara dan kegiatanmu.</p>
-                <button class="btn btn-danger px-4 mt-auto" type="button" data-bs-toggle="modal" data-bs-target="#kerjasamaBarangModal">Lihat Katalog <i class="bi bi-arrow-up-right ms-1"></i></button>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
-            <article class="kerjasama-card h-100">
-              <div class="kerjasama-card-visual kerjasama-visual-permohonan"><i class="bi bi-file-earmark-check-fill"></i><span> LET'S MAKE IT HAPPEN</span></div>
-              <div class="kerjasama-card-body">
-                <span class="kerjasama-tag">03 · Pengajuan</span>
-                <h3>Permohonan</h3>
-                <p>Ajukan permohonan dukungan atau layanan KSR untuk kebutuhan kegiatanmu.</p>
-                <button class="btn btn-danger px-4 mt-auto" type="button" data-bs-toggle="modal" data-bs-target="#kerjasamaPermohonanModal">Persyaratan <i class="bi bi-arrow-up-right ms-1"></i></button>
-              </div>
-=======
     <!-- ================= BIROKRASI ================= -->
     <section id="birokrasi" class="kerjasama-section py-5">
       <div class="container py-3">
@@ -523,42 +375,12 @@
             <article class="kerjasama-card h-100">
               <div class="kerjasama-card-visual kerjasama-visual-barang"><i class="bi bi-box-seam-fill"></i><span>PERLENGKAPAN KEGIATAN</span></div>
               <div class="kerjasama-card-body"><span class="kerjasama-tag">04 · Sarana</span><h3>Peminjaman Barang</h3><p>Pengajuan peminjaman perlengkapan dengan waktu pengambilan dan pengembalian yang disepakati.</p><button class="btn btn-danger px-4 mt-auto" type="button" data-bs-toggle="modal" data-bs-target="#layananBarangModal">Lihat Detail <i class="bi bi-arrow-up-right ms-1"></i></button></div>
->>>>>>> ab1799a (Revisi UI)
             </article>
           </div>
         </div>
       </div>
     </section>
 
-<<<<<<< HEAD
-    <!-- Modal Media Partner -->
-    <div class="modal fade kerjasama-modal" id="kerjasamaMediaModal" tabindex="-1" aria-labelledby="kerjasamaMediaLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
-        <div class="modal-header"><h2 class="modal-title" id="kerjasamaMediaLabel">Media Partner</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
-        <div class="modal-body"><div class="kerjasama-modal-icon"><i class="bi bi-instagram"></i></div><p class="fw-semibold mb-2">Kolaborasi publikasi bersama KSR PMI UNPAS</p><p class="text-muted">Hubungi kami melalui Instagram untuk mendiskusikan bentuk kolaborasi, jadwal publikasi, dan materi promosi. Detail kerja sama akan dikonfirmasi oleh pengurus.</p><div class="kerjasama-info-row"><i class="bi bi-instagram"></i><span>@ksrunpas</span></div></div>
-        <div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Nanti</button><a class="btn btn-danger kerjasama-btn-primary" href="https://www.instagram.com/ksrunpas/" target="_blank" rel="noopener noreferrer">Kunjungi Instagram <i class="bi bi-arrow-up-right ms-1"></i></a></div>
-      </div></div>
-    </div>
-
-    <!-- Modal Katalog Peminjaman -->
-    <div class="modal fade kerjasama-modal" id="kerjasamaBarangModal" tabindex="-1" aria-labelledby="kerjasamaBarangLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"><div class="modal-content">
-        <div class="modal-header"><div><span class="kerjasama-tag">Katalog layanan</span><h2 class="modal-title" id="kerjasamaBarangLabel">Peminjaman Barang</h2></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
-        <div class="modal-body"><p class="text-muted mb-4">Daftar dan tarif berikut merupakan contoh sementara. Ketersediaan, biaya, dan ketentuan aktual perlu dikonfirmasi kepada pengurus.</p>
-          <div class="kerjasama-inventory-item"><div class="kerjasama-inventory-art art-p3k"><i class="bi bi-plus-square-fill"></i></div><div class="flex-grow-1"><h3>Perlengkapan P3K</h3><p>Perlengkapan pertolongan pertama untuk mendukung kegiatan.</p><span class="kerjasama-price">Contoh tarif: Rp10.000 / hari</span></div><button class="btn kerjasama-detail-btn" type="button" data-item="Perlengkapan P3K" data-desc="Perlengkapan pertolongan pertama untuk mendukung kegiatan." data-price="Contoh tarif: Rp10.000 / hari" data-bs-toggle="modal" data-bs-target="#kerjasamaItemModal">Detail</button></div>
-          <div class="kerjasama-inventory-item"><div class="kerjasama-inventory-art art-tandu"><i class="bi bi-bandaid-fill"></i></div><div class="flex-grow-1"><h3>Tandu</h3><p>Peralatan simulasi atau dukungan kegiatan pertolongan pertama.</p><span class="kerjasama-price">Contoh tarif: Rp25.000 / hari</span></div><button class="btn kerjasama-detail-btn" type="button" data-item="Tandu" data-desc="Peralatan simulasi atau dukungan kegiatan pertolongan pertama." data-price="Contoh tarif: Rp25.000 / hari" data-bs-toggle="modal" data-bs-target="#kerjasamaItemModal">Detail</button></div>
-          <div class="kerjasama-inventory-item"><div class="kerjasama-inventory-art art-kursi"><i class="bi bi-person-wheelchair"></i></div><div class="flex-grow-1"><h3>Kursi Roda</h3><p>Alat bantu mobilitas untuk kebutuhan kegiatan tertentu.</p><span class="kerjasama-price">Contoh tarif: Rp30.000 / hari</span></div><button class="btn kerjasama-detail-btn" type="button" data-item="Kursi Roda" data-desc="Alat bantu mobilitas untuk kebutuhan kegiatan tertentu." data-price="Contoh tarif: Rp30.000 / hari" data-bs-toggle="modal" data-bs-target="#kerjasamaItemModal">Detail</button></div>
-        </div><div class="modal-footer"><a class="btn btn-danger kerjasama-btn-primary" href="https://wa.me/6285624956109?text=Halo%20KSR%20UNPAS%2C%20saya%20ingin%20bertanya%20tentang%20peminjaman%20barang." target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp me-1"></i> Tanya Pengurus</a></div>
-      </div></div>
-    </div>
-
-    <!-- Modal Detail Item -->
-    <div class="modal fade kerjasama-modal" id="kerjasamaItemModal" tabindex="-1" aria-labelledby="kerjasamaItemLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title" id="kerjasamaItemLabel">Detail Barang</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div><div class="modal-body"><p id="kerjasamaItemDesc" class="text-muted"></p><div id="kerjasamaItemPrice" class="kerjasama-price mb-3"></div><p class="small text-muted mb-0">Tarif dan ketersediaan pada contoh ini belum resmi. Silakan konfirmasi sebelum mengajukan peminjaman.</p></div><div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button><a class="btn btn-danger kerjasama-btn-primary" href="https://wa.me/6285624956109?text=Halo%20KSR%20UNPAS%2C%20saya%20ingin%20bertanya%20tentang%20peminjaman%20barang." target="_blank" rel="noopener noreferrer">Hubungi Admin</a></div></div></div></div>
-
-    <!-- Modal Permohonan -->
-    <div class="modal fade kerjasama-modal" id="kerjasamaPermohonanModal" tabindex="-1" aria-labelledby="kerjasamaPermohonanLabel" aria-hidden="true"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title" id="kerjasamaPermohonanLabel">Permohonan Layanan</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div><div class="modal-body"><p class="text-muted">Agar pengajuan dapat ditinjau dengan jelas, siapkan informasi berikut:</p><ul class="kerjasama-requirements"><li><i class="bi bi-check-circle-fill"></i> Nama organisasi atau penanggung jawab</li><li><i class="bi bi-check-circle-fill"></i> Tujuan dan bentuk permohonan</li><li><i class="bi bi-check-circle-fill"></i> Tanggal, waktu, dan lokasi kegiatan</li><li><i class="bi bi-check-circle-fill"></i> Perkiraan peserta serta kontak aktif</li><li><i class="bi bi-check-circle-fill"></i> Surat atau dokumen pendukung jika diperlukan</li></ul><div class="kerjasama-benefit-note"><strong>Manfaatnya?</strong><p class="mb-0">Pengajuan lebih terarah, kebutuhan kegiatan dapat dipahami sejak awal, dan pengurus lebih mudah memberi konfirmasi. Persetujuan bergantung pada jenis permohonan dan ketersediaan layanan.</p></div></div><div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button><a class="btn btn-danger kerjasama-btn-primary" href="https://wa.me/6285624956109?text=Halo%20KSR%20UNPAS%2C%20saya%20ingin%20mengajukan%20permohonan%20layanan." target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp me-1"></i> Hubungi Admin</a></div></div></div></div>
-
-=======
     <!-- Rincian layanan singkat ditampilkan dalam modal. Rincian penuh ada di halaman masing-masing. -->
     <div class="modal fade kerjasama-modal" id="layananMediaModal" tabindex="-1" aria-labelledby="layananMediaLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title" id="layananMediaLabel">Media Partner</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
@@ -591,7 +413,6 @@
     <div class="modal fade kerjasama-modal" id="layananInfoModal" tabindex="-1" aria-labelledby="layananInfoModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title" id="layananInfoModalLabel">Informasi Layanan</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div><div class="modal-body"><div class="kerjasama-modal-icon"><i class="bi bi-info-circle"></i></div><p id="layananInfoModalMessage" class="text-muted mb-0"></p></div><div class="modal-footer"><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Mengerti</button></div></div></div>
     </div>
->>>>>>> ab1799a (Revisi UI)
 
     <section id="benefit" class="py-5">
       <div class="container py-3">

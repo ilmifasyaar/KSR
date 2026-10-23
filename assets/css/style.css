@@ -522,18 +522,6 @@ section {
   }
 }
 
-<<<<<<< HEAD
-/* Berita ditampilkan setelah tombol More Information dipilih. */
-#berita.d-none {
-  display: none !important;
-}
-
-.news-trigger {
-  min-width: 190px;
-}
-
-=======
->>>>>>> ab1799a (Revisi UI)
 /* ================= KERJA SAMA ================= */
 .kerjasama-section {
   background: #fcfcfd;
@@ -1105,8 +1093,6 @@ section {
     min-height: 88px;
   }
 }
-<<<<<<< HEAD
-=======
 
 /* ================= BRAINSTORM UPDATE: NAVBAR & LAYOUT PAGES ================= */
 .navbar-ksr {
@@ -1258,4 +1244,3 @@ section {
   .news-page-toolbar .news-filter { width: 100%; max-width: 100%; }
   .dedemis-empty-state { padding: 28px 20px; }
 }
->>>>>>> ab1799a (Revisi UI)
