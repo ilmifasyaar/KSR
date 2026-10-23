@@ -522,6 +522,7 @@ section {
   }
 }
 
+<<<<<<< HEAD
 /* Berita ditampilkan setelah tombol More Information dipilih. */
 #berita.d-none {
   display: none !important;
@@ -531,6 +532,8 @@ section {
   min-width: 190px;
 }
 
+=======
+>>>>>>> ab1799a (Revisi UI)
 /* ================= KERJA SAMA ================= */
 .kerjasama-section {
   background: #fcfcfd;
@@ -1102,3 +1105,157 @@ section {
     min-height: 88px;
   }
 }
+<<<<<<< HEAD
+=======
+
+/* ================= BRAINSTORM UPDATE: NAVBAR & LAYOUT PAGES ================= */
+.navbar-ksr {
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: background-color .28s ease, box-shadow .28s ease, backdrop-filter .28s ease;
+}
+.navbar-ksr.navbar-scrolled,
+.navbar-ksr.navbar-inner-page {
+  background: rgba(239, 241, 244, .94);
+  box-shadow: 0 6px 22px rgba(34, 28, 29, .07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.navbar-ksr.hide { transform: none; }
+.navbar-ksr .navbar-brand-text small { color: #64666b; }
+.navbar-ksr .navbar-toggler { border-color: rgba(120, 30, 40, .25); }
+.navbar-ksr .navbar-toggler:focus { box-shadow: 0 0 0 .15rem rgba(179, 0, 0, .14); }
+@media (max-width: 991.98px) {
+  .navbar-ksr:not(.navbar-inner-page) .navbar-collapse {
+    margin-top: 10px;
+    padding: 12px 18px 14px;
+    border: 1px solid rgba(160, 150, 152, .25);
+    border-radius: 14px;
+    background: rgba(245, 246, 248, .98);
+    box-shadow: 0 12px 28px rgba(38, 27, 29, .08);
+  }
+  .navbar-ksr.navbar-inner-page .navbar-collapse {
+    margin-top: 10px;
+    padding: 12px 18px 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .97);
+  }
+}
+.hero h1 { line-height: 1.1; letter-spacing: -.035em; }
+.hero .btn-danger { box-shadow: 0 8px 20px rgba(179, 0, 0, .14); }
+.hero .btn-danger:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(179, 0, 0, .22); }
+.btn { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+.about-content .btn { border-width: 1.5px; font-weight: 700; }
+.kerjasama-visual-ppgd { background: radial-gradient(circle at 80% 15%, #ffb0b4, transparent 32%), linear-gradient(135deg, #8d1826, #d44d54); }
+.kerjasama-visual-pelatihan { background: radial-gradient(circle at 25% 15%, #f9d9a8, transparent 32%), linear-gradient(135deg, #423148, #98627a); }
+.kerjasama-card h3 { font-size: 1.2rem; font-weight: 800; color: #292326; }
+.kerjasama-card-body > p { color: #6d6870; line-height: 1.65; }
+.layanan-modal-actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-start; }
+.layanan-modal-actions > * { margin: 0 !important; }
+.layanan-modal-actions .btn { font-size: .88rem; font-weight: 650; }
+
+/* Halaman sekunder */
+.inner-page { background: #fff; }
+.inner-main { padding-top: 0; }
+.inner-hero {
+  padding: 140px 0 82px;
+  background: linear-gradient(115deg, #f1f2f4 0%, #fbfbfc 55%, #fff5f5 100%);
+  border-bottom: 1px solid #eee6e7;
+  overflow: hidden;
+  position: relative;
+}
+.inner-hero::after {
+  content: '';
+  position: absolute;
+  right: -100px;
+  top: -180px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 62px solid rgba(179, 0, 0, .045);
+  pointer-events: none;
+}
+.inner-hero .container { position: relative; z-index: 1; }
+.inner-back-link { color: #6e5155; text-decoration: none; font-size: .9rem; font-weight: 700; }
+.inner-back-link:hover { color: var(--ksr-red); }
+.inner-hero h1 { max-width: 900px; margin: 13px 0 16px; color: #272326; font-size: clamp(2.3rem, 5vw, 4.25rem); font-weight: 850; line-height: 1.06; letter-spacing: -.04em; }
+.inner-hero h1 span { color: var(--ksr-red); }
+.inner-hero p { max-width: 700px; color: #69666c; font-size: 1.1rem; line-height: 1.75; margin-bottom: 0; }
+.inner-content-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(270px, .8fr); gap: 24px; align-items: start; }
+.inner-article-card, .inner-side-card, .dedemis-empty-state, .value-card, .service-detail-card, .service-contact-card {
+  border: 1px solid #eee4e5;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 12px 34px rgba(46, 26, 30, .045);
+}
+.inner-article-card { padding: clamp(24px, 4vw, 42px); }
+.inner-number { color: #aa4a54; font-size: .7rem; font-weight: 850; letter-spacing: .15em; }
+.inner-article-card h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 850; margin: 10px 0 20px; color: #2a2528; }
+.inner-article-card p { color: #625d62; line-height: 1.9; }
+.inner-side-card { padding: 28px; background: linear-gradient(145deg, #fff, #fff9f9); }
+.inner-side-icon, .value-icon, .service-detail-icon { display: grid; place-items: center; color: var(--ksr-red); background: #fff0f1; border-radius: 16px; }
+.inner-side-icon { width: 58px; height: 58px; font-size: 1.5rem; margin-bottom: 20px; }
+.inner-side-card h3 { margin: 10px 0; font-weight: 800; font-size: 1.35rem; }
+.inner-side-card p { color: #6e676c; line-height: 1.7; font-size: .92rem; }
+.history-timeline { margin-top: 24px; border-left: 2px solid #f0d7da; padding-left: 18px; }
+.history-timeline > div { position: relative; padding-bottom: 19px; }
+.history-timeline > div:last-child { padding-bottom: 0; }
+.history-timeline > div::before { content: ''; position: absolute; left: -24px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: var(--ksr-red); box-shadow: 0 0 0 4px #fff0f1; }
+.history-timeline strong, .history-timeline span { display: block; }
+.history-timeline strong { color: #3c3135; font-size: .9rem; }
+.history-timeline span { margin-top: 4px; color: #83777b; font-size: .8rem; line-height: 1.5; }
+.inner-soft-section { background: #faf8f8; border-top: 1px solid #f0e9e9; border-bottom: 1px solid #f0e9e9; }
+.inner-section-heading { max-width: 720px; margin: 0 auto 32px; text-align: center; }
+.inner-section-heading h2 { color: #292427; font-weight: 850; font-size: clamp(1.8rem, 3.2vw, 2.45rem); margin: 9px 0; }
+.inner-section-heading p { color: #797278; line-height: 1.7; margin: 0; }
+.dedemis-empty-state { max-width: 750px; margin: 0 auto; padding: 36px; text-align: center; }
+.dedemis-empty-icon { width: 70px; height: 70px; display: grid; place-items: center; margin: 0 auto 18px; color: var(--ksr-red); background: #fff0f1; border-radius: 22px; font-size: 1.8rem; }
+.dedemis-empty-state h3 { font-size: 1.35rem; font-weight: 850; }
+.dedemis-empty-state p { max-width: 570px; margin: 0 auto 17px; color: #716a70; line-height: 1.75; }
+.dedemis-status { display: inline-block; padding: 7px 12px; color: #6b6267; background: #f5f2f3; border-radius: 999px; font-size: .78rem; font-weight: 700; }
+.value-card { padding: 28px; transition: transform .22s ease, box-shadow .22s ease; }
+.value-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(46, 26, 30, .085); }
+.value-icon { width: 54px; height: 54px; font-size: 1.4rem; margin-bottom: 20px; }
+.value-card h3 { font-size: 1.18rem; font-weight: 850; }
+.value-card p { color: #746c72; font-size: .92rem; line-height: 1.75; margin-bottom: 0; }
+.inner-cta { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 34px; border: 1px solid #f0d9dc; border-radius: 22px; background: linear-gradient(110deg, #fff, #fff5f6); }
+.inner-cta h2 { color: #2d272a; font-size: clamp(1.45rem, 2.5vw, 2rem); font-weight: 850; margin: 7px 0; }
+.inner-cta p { color: #71686e; }
+.news-page-toolbar { display: flex; justify-content: space-between; align-items: end; gap: 24px; }
+.news-page-toolbar h2 { margin-top: 8px; }
+.news-page .news-card { border-color: #eee4e5; box-shadow: 0 9px 26px rgba(46, 26, 30, .05) !important; }
+.news-page .news-card .card-body { gap: 4px; }
+.news-page .news-card h5 { line-height: 1.4; }
+.news-page .news-card p { line-height: 1.7; }
+.news-editor-note { padding: 14px 17px; border-radius: 12px; background: #f7f5f5; color: #726a70; font-size: .84rem; line-height: 1.7; }
+.service-detail-layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, .75fr); align-items: start; gap: 24px; }
+.service-detail-card { padding: clamp(24px, 4vw, 40px); }
+.service-detail-icon { width: 64px; height: 64px; font-size: 1.7rem; margin-bottom: 22px; }
+.service-detail-card h2 { margin: 9px 0 14px; font-size: clamp(1.55rem, 3vw, 2rem); font-weight: 850; }
+.service-detail-card > p { color: #6a6369; line-height: 1.8; }
+.service-steps { list-style: none; counter-reset: service; display: grid; gap: 13px; padding: 0; margin: 26px 0; }
+.service-steps li { display: flex; gap: 13px; align-items: flex-start; color: #4c454a; line-height: 1.75; }
+.service-step-check { display: grid; place-items: center; flex: 0 0 28px; width: 28px; height: 28px; border-radius: 9px; color: #23815a; background: #eaf8f0; margin-top: 1px; }
+.service-important-note { display: flex; gap: 12px; padding: 15px; border-radius: 13px; background: #fff6f6; border: 1px solid #f3dfe1; color: #aa2d3a; }
+.service-important-note > i { margin-top: 3px; }
+.service-important-note p { color: #6d555a; line-height: 1.7; margin: 0; font-size: .9rem; }
+.service-contact-card { padding: 24px; }
+.service-contact-card h3 { font-size: 1.35rem; font-weight: 850; margin: 8px 0 14px; }
+.service-contact-card ul { padding-left: 18px; color: #625a60; line-height: 1.8; font-size: .9rem; }
+.service-contact-card p { color: #7b7177; font-size: .86rem; line-height: 1.7; }
+.service-poster-placeholder { display: flex; flex-direction: column; align-items: center; gap: 9px; text-align: center; margin-top: 16px; padding: 28px 20px; min-height: 170px; border: 1px dashed #dcc6c9; border-radius: 17px; color: #8b6d72; background: #fffafa; }
+.service-poster-placeholder > i { font-size: 2rem; color: #b74a55; }
+.service-poster-placeholder strong { color: #56464b; }
+.service-poster-placeholder p { color: #887d82; font-size: .82rem; line-height: 1.5; }
+@media (max-width: 767.98px) {
+  .inner-hero { padding: 118px 0 58px; }
+  .inner-hero p { font-size: 1rem; }
+  .inner-content-grid, .service-detail-layout { grid-template-columns: 1fr; }
+  .inner-cta { flex-direction: column; align-items: flex-start; padding: 25px; }
+  .news-page-toolbar { align-items: stretch; flex-direction: column; }
+  .news-page-toolbar .news-filter { width: 100%; max-width: 100%; }
+  .dedemis-empty-state { padding: 28px 20px; }
+}
+>>>>>>> ab1799a (Revisi UI)

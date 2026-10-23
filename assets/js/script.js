@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+<<<<<<< HEAD
   const newsSection = document.getElementById('berita');
   const newsTriggers = document.querySelectorAll('.news-trigger, .news-trigger-link');
 
@@ -42,6 +43,9 @@ document.addEventListener('DOMContentLoaded', function () {
   newsTriggers.forEach((trigger) => {
     trigger.addEventListener('click', tampilkanBerita);
   });
+=======
+  // Berita dirender hanya pada halaman berita-kegiatan.php.
+>>>>>>> ab1799a (Revisi UI)
 
   const dataBerita = {
     1: {
@@ -225,6 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+<<<<<<< HEAD
   window.hideBerita = function () {
     if (!newsSection) return;
 
@@ -248,6 +253,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   };
+=======
+>>>>>>> ab1799a (Revisi UI)
 
   // Angka anggota dikelola manual di sini. Ganti dengan data resmi saat tersedia.
   const strukturMemberCount = { aktif: 24, nonaktif: 8 };
@@ -312,6 +319,7 @@ document.addEventListener('DOMContentLoaded', function () {
       history.scrollRestoration = 'manual';
     }
 
+<<<<<<< HEAD
     if (newsSection) {
       newsSection.classList.add('d-none');
     }
@@ -343,4 +351,88 @@ document.addEventListener('DOMContentLoaded', function () {
 
     lastScroll = currentScroll;
   });
+=======
+    // Hanya reset posisi/fragment ketika halaman beranda sedang dibuka.
+    if (document.getElementById('beranda')) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      if (!window.location.hash || window.location.hash === '#beranda') {
+        history.replaceState(null, null, window.location.pathname + '#beranda');
+      }
+    }
+  });
+
+  const navbar = document.querySelector('.navbar-ksr');
+  if (navbar) {
+    const updateNavbar = () => {
+      navbar.classList.toggle('navbar-scrolled', window.scrollY > 28 || navbar.classList.contains('navbar-inner-page'));
+    };
+    updateNavbar();
+    window.addEventListener('scroll', updateNavbar, { passive: true });
+  }
+
+  // Profil PIC berpindah modal (modal layanan ditutup terlebih dahulu, bukan ditumpuk).
+  const layananInfoModalEl = document.getElementById('layananInfoModal');
+  const layananInfoModal = layananInfoModalEl ? bootstrap.Modal.getOrCreateInstance(layananInfoModalEl) : null;
+  function showLayananInfo(trigger, title, message) {
+    const sourceModalEl = trigger.closest('.modal');
+    const showInfo = () => {
+      const titleEl = document.getElementById('layananInfoModalLabel');
+      const messageEl = document.getElementById('layananInfoModalMessage');
+      if (titleEl) titleEl.textContent = title;
+      if (messageEl) messageEl.textContent = message;
+      if (layananInfoModal) layananInfoModal.show();
+    };
+    if (sourceModalEl) {
+      sourceModalEl.addEventListener('hidden.bs.modal', showInfo, { once: true });
+      bootstrap.Modal.getOrCreateInstance(sourceModalEl).hide();
+    } else {
+      showInfo();
+    }
+  }
+
+  document.querySelectorAll('[data-pic-nama]').forEach((button) => {
+    button.addEventListener('click', function () {
+      const name = (this.dataset.picNama || '').trim();
+      const role = this.dataset.picJabatan || 'Penanggung Jawab Layanan';
+      if (!name) {
+        showLayananInfo(this, 'Penanggung Jawab Layanan', 'Nama penanggung jawab untuk layanan ini belum dimasukkan ke data front end. Setelah nama resmi dikonfirmasi, tombol ini akan membuka profil pengurus yang sesuai.');
+        return;
+      }
+      const profileTrigger = Array.from(document.querySelectorAll('.struktur-trigger')).find((item) => item.dataset.nama === name);
+      if (!profileTrigger) {
+        showLayananInfo(this, role, 'Profil pengurus untuk layanan ini belum tersedia pada daftar struktur organisasi.');
+        return;
+      }
+      const sourceModalEl = this.closest('.modal');
+      if (sourceModalEl) {
+        sourceModalEl.addEventListener('hidden.bs.modal', () => profileTrigger.click(), { once: true });
+        bootstrap.Modal.getOrCreateInstance(sourceModalEl).hide();
+      } else {
+        profileTrigger.click();
+      }
+    });
+  });
+
+  // Nomor WA PIC per layanan sengaja dibiarkan kosong sampai nomor resmi diberikan.
+  const birokrasiPICWhatsapp = {
+    'media-partner': '',
+    ppgd: '',
+    'pelatihan-ppgd': '',
+    'peminjaman-barang': '',
+  };
+  document.querySelectorAll('[data-service-wa]').forEach((button) => {
+    button.addEventListener('click', function () {
+      const phone = (birokrasiPICWhatsapp[this.dataset.serviceWa] || '').replace(/\D/g, '');
+      if (phone) {
+        const message = encodeURIComponent('Halo, saya ingin bertanya mengenai layanan ' + this.dataset.serviceWa.replaceAll('-', ' ') + ' KSR PMI UNPAS.');
+        window.open('https://wa.me/' + phone + '?text=' + message, '_blank', 'noopener,noreferrer');
+        const source = this.closest('.modal');
+        if (source) bootstrap.Modal.getOrCreateInstance(source).hide();
+      } else {
+        showLayananInfo(this, 'Kontak Penanggung Jawab', 'Nomor WhatsApp PIC untuk layanan ini belum dimasukkan. Kontak akan diarahkan langsung ke PIC setelah nomor resmi dikonfirmasi agar tidak salah menghubungi orang.');
+      }
+    });
+  });
+
+>>>>>>> ab1799a (Revisi UI)
 });

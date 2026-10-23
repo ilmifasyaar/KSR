@@ -1,0 +1,20 @@
+Pembaruan Front End KSR PMI UNPAS
+
+Yang diterapkan:
+- Navbar transparan di area beranda dan berubah menjadi abu-abu lembut saat halaman digulir.
+- Tombol Gabung Sekarang menuju tautan formulir resmi yang sudah digunakan project.
+- Ringkasan Tentang di beranda dengan halaman detail tentang sejarah, Dedemis, nilai, dan regenerasi.
+- Tombol More Information menuju halaman terpisah Berita & Kegiatan.
+- Empat kartu Birokrasi: Media Partner, PPGD, Pelatihan PPGD, dan Peminjaman Barang.
+- Modal ringkas untuk tiap layanan dan halaman detail masing-masing layanan.
+- Tampilan responsif untuk halaman tambahan dan modal.
+- Mempertahankan struktur profil pengurus dan panel status anggota yang sudah ada.
+
+Batasan data saat ini:
+- Berita & Kegiatan masih menggunakan data front end yang tertanam di assets/js/script.js. Penyimpanan dan pengelolaan dari panel admin memerlukan pekerjaan backend terpisah.
+- Nama PIC dan nomor WhatsApp PIC per layanan belum dikonfirmasi dalam data project, sehingga tombol menampilkan informasi bahwa data resmi perlu dilengkapi daripada memakai kontak yang belum pasti.
+- Daftar nama Dedemis/periode dan poster resmi Birokrasi perlu dimasukkan setelah aset/data resminya tersedia. Halaman layanan sudah disiapkan sebagai tempat tampilnya informasi tersebut.
+
+Berkas utama yang disesuaikan: index.php, assets/css/style.css, assets/js/script.js.
+Berkas halaman baru: tentang.php, berita-kegiatan.php, dan birokrasi/*.php.
+Tidak ada perubahan backend/database/admin sebagai bagian dari pekerjaan front-end ini.
