@@ -92,9 +92,6 @@
 
             <p>Relawan Mahasiswa Bergerak Di Bidang Kemanusiaan</p>
 
-            <!-- <div class="mt-4"> 
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0NmgYEEZqV8JCX05g1Rwz4yFOSqBbFeIiD_z_RleGBGhLWw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-lg px-4 me-2"> Gabung Sekarang </a>
-            </div> -->
           </div>
 
           <!-- Logo kanan -->
@@ -329,7 +326,6 @@
                 <div class="struktur-profile-bio">
                   <span class="struktur-bio-label">BIODATA</span>
                   <h3 id="strukturModalNama" class="fw-bold mb-2"></h3>
-                  <p id="strukturModalJabatan" class="struktur-profile-role"></p>
                   <div class="struktur-bio-divider"></div>
                   <div class="struktur-bio-row"><i class="bi bi-person-badge"></i><div><span>Jabatan</span><strong id="strukturModalBidang"></strong></div></div>
                   <div class="struktur-bio-row"><i class="bi bi-chat-square-text"></i><div><span>Tentang</span><p id="strukturModalBio"></p></div></div>
@@ -385,28 +381,28 @@
     <div class="modal fade kerjasama-modal" id="layananMediaModal" tabindex="-1" aria-labelledby="layananMediaLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title" id="layananMediaLabel">Media Partner</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
         <div class="modal-body"><div class="kerjasama-modal-icon"><i class="bi bi-instagram"></i></div><p class="fw-semibold">Ketentuan utama</p><ul class="kerjasama-requirements"><li><i class="bi bi-check-circle-fill"></i>Ikuti minimal 10 akun media sosial KSR yang ditentukan.</li><li><i class="bi bi-check-circle-fill"></i>Sertakan logo KSR PMI Unit UNPAS pada media acara.</li><li><i class="bi bi-check-circle-fill"></i>Kirim bukti follow dan poster acara ke Humas Organisasi.</li></ul><p class="small text-muted mb-0">Pengumuman publikasi dilakukan melalui Instagram <strong>@ksrunpas</strong>.</p></div>
-        <div class="modal-footer layanan-modal-actions"><button class="btn btn-outline-danger" type="button" data-pic-nama="Tiara" data-pic-jabatan="Koordinator HUMAS">Penanggung Jawab</button><button class="btn btn-danger" type="button" data-service-wa="media-partner">Hubungi Penanggung Jawab</button><a class="btn btn-light" href="birokrasi/media-partner.php">Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i></a></div>
+        <div class="modal-footer layanan-modal-actions"><div class="layanan-primary-actions"><button class="btn btn-outline-danger" type="button" data-pic-nama="Tiara" data-pic-jabatan="Koordinator HUMAS">Penanggung Jawab</button><button class="btn btn-danger" type="button" data-service-wa="media-partner">Hubungi Penanggung Jawab</button></div><a class="btn btn-light layanan-more-link" href="birokrasi/media-partner.php">Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i></a></div>
       </div></div>
     </div>
 
     <div class="modal fade kerjasama-modal" id="layananPpgdModal" tabindex="-1" aria-labelledby="layananPpgdLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title" id="layananPpgdLabel">PPGD</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
         <div class="modal-body"><div class="kerjasama-modal-icon"><i class="bi bi-heart-pulse"></i></div><p class="fw-semibold">Ketentuan utama</p><ul class="kerjasama-requirements"><li><i class="bi bi-check-circle-fill"></i>Ajukan surat permohonan tim pertolongan pertama paling lambat H-7 sebelum acara.</li><li><i class="bi bi-check-circle-fill"></i>Lakukan koordinasi dan penandatanganan MOU.</li><li><i class="bi bi-check-circle-fill"></i>Detail teknis dikonfirmasi bersama penanggung jawab layanan.</li></ul></div>
-        <div class="modal-footer layanan-modal-actions"><button class="btn btn-outline-danger" type="button" data-pic-nama="" data-pic-jabatan="Penanggung Jawab PPGD">Penanggung Jawab</button><button class="btn btn-danger" type="button" data-service-wa="ppgd">Hubungi Penanggung Jawab</button><a class="btn btn-light" href="birokrasi/ppgd.php">Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i></a></div>
+        <div class="modal-footer layanan-modal-actions"><div class="layanan-primary-actions"><button class="btn btn-outline-danger" type="button" data-pic-nama="" data-pic-jabatan="Penanggung Jawab PPGD">Penanggung Jawab</button><button class="btn btn-danger" type="button" data-service-wa="ppgd">Hubungi Penanggung Jawab</button></div><a class="btn btn-light layanan-more-link" href="birokrasi/ppgd.php">Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i></a></div>
       </div></div>
     </div>
 
     <div class="modal fade kerjasama-modal" id="layananPelatihanModal" tabindex="-1" aria-labelledby="layananPelatihanLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title" id="layananPelatihanLabel">Pelatihan PPGD</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
         <div class="modal-body"><div class="kerjasama-modal-icon"><i class="bi bi-mortarboard"></i></div><p class="fw-semibold">Ketentuan utama</p><ul class="kerjasama-requirements"><li><i class="bi bi-check-circle-fill"></i>Hubungi Bidang DIKLAT paling lambat satu minggu sebelum pelatihan.</li><li><i class="bi bi-check-circle-fill"></i>Minimal 5 peserta; waktu dan tempat dikoordinasikan bersama.</li><li><i class="bi bi-check-circle-fill"></i>Materi meliputi teori singkat dan praktik medis dasar.</li><li><i class="bi bi-check-circle-fill"></i>Peserta dan pelatih wajib menjaga ketepatan waktu, kerapian, serta etika.</li></ul></div>
-        <div class="modal-footer layanan-modal-actions"><button class="btn btn-outline-danger" type="button" data-pic-nama="M. Rifqi Rajif" data-pic-jabatan="Koordinator Bidang DIKLAT">Penanggung Jawab</button><button class="btn btn-danger" type="button" data-service-wa="pelatihan-ppgd">Hubungi Penanggung Jawab</button><a class="btn btn-light" href="birokrasi/pelatihan-ppgd.php">Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i></a></div>
+        <div class="modal-footer layanan-modal-actions"><div class="layanan-primary-actions"><button class="btn btn-outline-danger" type="button" data-pic-nama="M. Rifqi Rajif" data-pic-jabatan="Koordinator Bidang DIKLAT">Penanggung Jawab</button><button class="btn btn-danger" type="button" data-service-wa="pelatihan-ppgd">Hubungi Penanggung Jawab</button></div><a class="btn btn-light layanan-more-link" href="birokrasi/pelatihan-ppgd.php">Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i></a></div>
       </div></div>
     </div>
 
     <div class="modal fade kerjasama-modal" id="layananBarangModal" tabindex="-1" aria-labelledby="layananBarangLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title" id="layananBarangLabel">Peminjaman Barang</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
         <div class="modal-body"><div class="kerjasama-modal-icon"><i class="bi bi-box-seam"></i></div><p class="fw-semibold">Ketentuan utama</p><ul class="kerjasama-requirements"><li><i class="bi bi-check-circle-fill"></i>Ajukan surat peminjaman paling lambat H-3.</li><li><i class="bi bi-check-circle-fill"></i>Pengambilan dilakukan H-1 atau hari acara setelah konfirmasi.</li><li><i class="bi bi-check-circle-fill"></i>Barang dikembalikan sesuai waktu yang disepakati, minimal H+1.</li><li><i class="bi bi-check-circle-fill"></i>Barang rusak atau hilang diganti dengan barang yang sama.</li></ul></div>
-        <div class="modal-footer layanan-modal-actions"><button class="btn btn-outline-danger" type="button" data-pic-nama="" data-pic-jabatan="Penanggung Jawab Peminjaman Barang">Penanggung Jawab</button><button class="btn btn-danger" type="button" data-service-wa="peminjaman-barang">Hubungi Penanggung Jawab</button><a class="btn btn-light" href="birokrasi/peminjaman-barang.php">Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i></a></div>
+        <div class="modal-footer layanan-modal-actions"><div class="layanan-primary-actions"><button class="btn btn-outline-danger" type="button" data-pic-nama="" data-pic-jabatan="Penanggung Jawab Peminjaman Barang">Penanggung Jawab</button><button class="btn btn-danger" type="button" data-service-wa="peminjaman-barang">Hubungi Penanggung Jawab</button></div><a class="btn btn-light layanan-more-link" href="birokrasi/peminjaman-barang.php">Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i></a></div>
       </div></div>
     </div>
 
@@ -510,17 +506,6 @@
       </div>
     </section>
 
-    <section id="kontak" class="py-5">
-      <div class="container">
-        <div class="join-card text-center" data-aos="fade-up">
-          <span class="section-kicker">Pendaftaran</span>
-          <h2 class="text-danger fw-bold mb-3">Bergabung Bersama KSR PMI UNPAS</h2>
-          <p class="mb-4">Tertarik menjadi bagian dari KSR PMI Unit Universitas Pasundan? Daftarkan diri kamu dan bergabung bersama relawan mahasiswa yang bergerak di bidang kemanusiaan, sosial, kesehatan, dan kebencanaan.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0NmgYEEZqV8JCX05g1Rwz4yFOSqBbFeIiD_z_RleGBGhLWw/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-danger btn-lg px-5"> Daftar Sekarang </a>
-        </div>
-      </div>
-    </section>
-
     <footer class="footer text-white pt-5">
       <div class="container">
         <div class="row g-4 justify-content-between">
@@ -552,24 +537,6 @@
         <div class="text-center small pb-3">© 2026 KSR PMI Unit Universitas Pasundan. All Rights Reserved.</div>
       </div>
     </footer>
-
-    <div class="modal fade" id="detailBeritaModal" tabindex="-1" aria-labelledby="detailBeritaModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div>
-              <div id="detailTanggal" class="small text-muted mb-1"></div>
-              <h2 id="detailBeritaModalLabel" class="modal-title text-danger fw-bold fs-4">Detail Berita</h2>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
-          </div>
-          <div class="modal-body">
-            <img id="detailGambar" class="img-fluid rounded-3 shadow-sm mb-4 detail-gambar" alt="" />
-            <div id="detailKonten" class="detail-konten"></div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

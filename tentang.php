@@ -14,14 +14,14 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.php#beranda"><img src="assets/img/ksr.png" alt="Logo KSR PMI UNPAS" class="navbar-logo"><span class="navbar-brand-text"><strong>KSR PMI</strong><small>UNIVERSITAS PASUNDAN</small></span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navInner" aria-controls="navInner" aria-expanded="false" aria-label="Buka navigasi"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="navInner"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link" href="index.php#tentang">Tentang</a></li><li class="nav-item"><a class="nav-link" href="berita-kegiatan.php">Kegiatan</a></li><li class="nav-item"><a class="nav-link" href="index.php#struktur">Struktur</a></li><li class="nav-item"><a class="nav-link" href="index.php#birokrasi">Birokrasi</a></li><li class="nav-item"><a class="nav-link" href="index.php#achievement">Pencapaian</a></li></ul></div>
+      <div class="collapse navbar-collapse" id="navInner"><ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2"><li class="nav-item"><a class="nav-link" href="index.php#tentang">Tentang</a></li><li class="nav-item"><a class="nav-link" href="index.php#kegiatan">Kegiatan</a></li><li class="nav-item"><a class="nav-link" href="index.php#struktur">Struktur</a></li><li class="nav-item"><a class="nav-link" href="index.php#birokrasi">Birokrasi</a></li><li class="nav-item"><a class="nav-link" href="index.php#achievement">Pencapaian</a></li></ul></div>
     </div>
   </nav>
 
   <main class="inner-main">
     <section class="inner-hero about-hero">
       <div class="container" data-aos="fade-up">
-        <a class="inner-back-link" href="index.php#tentang"><i class="bi bi-arrow-left me-2"></i>Kembali ke Beranda</a>
+        <a class="inner-back-link" href="index.php#tentang"><i class="bi bi-arrow-left me-2"></i>Kembali ke Tentang</a>
         <span class="section-kicker d-block mt-4">Tentang Kami</span>
         <h1>Kenali perjalanan <span>KSR PMI UNPAS</span></h1>
         <p>Sejarah, para pemimpin terdahulu, serta nilai yang menjaga semangat kerelawanan di lingkungan Universitas Pasundan.</p>

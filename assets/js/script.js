@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Berita dirender hanya pada halaman berita-kegiatan.php.
+  // Data berita digunakan oleh daftar berita dan halaman detail front end.
 
   const dataBerita = {
     1: {
@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
       judul: 'Donor Darah Bersama Mahasiswa UNPAS',
       tanggal: '9 Desember 2025',
       date: '2025-12-09',
+      kategori: 'Kesehatan',
       gambar: 'assets/img/berita1.jpg',
       ringkasan: 'Kegiatan donor darah sebagai bentuk kepedulian sosial.',
       konten: `
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
       judul: 'KSR PMI UNPAS Gelar Pelatihan Vertical Rescue untuk Meningkatkan Keterampilan Relawan',
       tanggal: '17 Februari 2025',
       date: '2025-02-17',
+      kategori: 'Pelatihan',
       gambar: 'assets/img/berita2.jpg',
       ringkasan: 'Pelatihan untuk meningkatkan kompetensi relawan baru.',
       konten: `
@@ -60,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
       judul: 'KSR PMI Unit Universitas Pasundan Turun Membantu Penanganan Bencana Longsor di Cisarua',
       tanggal: '30 Januari 2026',
       date: '2026-01-30',
+      kategori: 'Kebencanaan',
       gambar: 'assets/img/berita3.jpeg',
       ringkasan: 'Relawan diterjunkan untuk membantu masyarakat terdampak bencana.',
       konten: `
@@ -73,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
       judul: 'KSR PMI UNPAS Gelar Pelatihan Water Rescue untuk Meningkatkan Kesiapsiagaan Relawan',
       tanggal: '30 Mei 2026',
       date: '2026-05-30',
+      kategori: 'Pelatihan',
       gambar: 'assets/img/berita4.jpeg',
       ringkasan: 'Pelatihan untuk meningkatkan keterampilan dan kesiapsiagaan relawan dalam menghadapi kondisi darurat di lingkungan perairan.',
       konten: `
@@ -86,6 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
       judul: 'KSR PMI UNPAS Siagakan Pos Medis dalam Aksi Demonstrasi Mahasiswa',
       tanggal: '29 Agustus 2025',
       date: '2025-08-29',
+      kategori: 'Kesehatan',
       gambar: 'assets/img/berita5.jpeg',
       ringkasan: 'KSR PMI UNPAS menyiagakan Pos Medis untuk dukungan pertolongan pertama dan kesiapsiagaan kesehatan.',
       konten: `
@@ -99,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
       judul: 'KSR PMI UNPAS Turun Membantu Penanganan Bencana Banjir di Bojongsoang',
       tanggal: '5 Desember 2025',
       date: '2025-12-05',
+      kategori: 'Kebencanaan',
       gambar: 'assets/img/berita6.jpg',
       ringkasan: 'KSR PMI UNPAS turut membantu masyarakat terdampak banjir di Bojongsoang.',
       konten: `
@@ -112,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
       judul: 'KSR PMI UNPAS Peringati Hari Anti Narkotika Internasional',
       tanggal: '26 Juni 2026',
       date: '2026-06-26',
+      kategori: 'Edukasi',
       gambar: 'assets/img/berita7.jpeg',
       ringkasan: 'Ajakan untuk meningkatkan kesadaran mengenai bahaya penyalahgunaan narkotika dan pentingnya menjaga kesehatan.',
       konten: `
@@ -125,53 +132,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const containerBerita = document.getElementById('daftarBerita');
   const sortBerita = document.getElementById('sortBerita');
-  const detailModalElement = document.getElementById('detailBeritaModal');
-  const detailModal = detailModalElement ? new bootstrap.Modal(detailModalElement) : null;
-
-  function renderBerita(list) {
-    if (!containerBerita) return;
-
-    containerBerita.innerHTML = list
-      .map(
-        (berita, index) => `
-        <div class="col-md-6 col-xl-4 berita-item" data-date="${berita.date}" data-aos="fade-up" data-aos-delay="${(index % 3) * 100}">
-          <article class="news-card h-100 shadow-sm">
-            <img src="${berita.gambar}" class="card-img-top" alt="${escapeHtml(berita.judul)}" />
-            <div class="card-body d-flex flex-column p-4">
-              <small class="text-muted">${berita.tanggal}</small>
-              <h5 class="mt-2">${escapeHtml(berita.judul)}</h5>
-              <p class="text-muted">${escapeHtml(berita.ringkasan)}</p>
-              <button type="button" class="btn btn-danger btn-sm mt-auto align-self-start" data-news-id="${Object.keys(dataBerita).find((key) => dataBerita[key] === berita)}">
-                Baca Selengkapnya
-              </button>
-            </div>
-          </article>
-        </div>
-      `,
-      )
-      .join('');
-
-    containerBerita.querySelectorAll('[data-news-id]').forEach((button) => {
-      button.addEventListener('click', () => bukaDetail(button.dataset.newsId));
-    });
-
-    if (window.AOS) AOS.refresh();
-  }
-
-  function bukaDetail(id) {
-    const berita = dataBerita[id];
-    if (!berita || !detailModal) return;
-
-    document.getElementById('detailBeritaModalLabel').textContent = berita.judul;
-    document.getElementById('detailTanggal').textContent = berita.tanggal;
-    document.getElementById('detailGambar').src = berita.gambar;
-    document.getElementById('detailGambar').alt = berita.judul;
-    document.getElementById('detailKonten').innerHTML = berita.konten;
-    detailModal.show();
-  }
+  const filterKategoriBerita = document.getElementById('filterKategoriBerita');
+  const paginationBerita = document.getElementById('paginationBerita');
+  const newsDetailContent = document.getElementById('newsDetailContent');
+  const beritaPerHalaman = 6;
+  let halamanBeritaAktif = 1;
 
   function escapeHtml(value) {
-    return value.replace(
+    return String(value).replace(
       /[&<>'"]/g,
       (char) =>
         ({
@@ -185,27 +153,94 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function getNewsList() {
-    return Object.values(dataBerita);
+    return Object.entries(dataBerita).map(([id, item]) => ({ ...item, id }));
   }
 
-  if (containerBerita) {
-    renderBerita(getNewsList());
+  function getFilteredNews() {
+    let news = getNewsList();
+    const category = filterKategoriBerita ? filterKategoriBerita.value : 'semua';
+    const sort = sortBerita ? sortBerita.value : 'terbaru';
+    if (category !== 'semua') news = news.filter((item) => item.kategori === category);
+    if (sort === 'terbaru') news.sort((a, b) => new Date(b.date) - new Date(a.date));
+    else if (sort === 'terlama') news.sort((a, b) => new Date(a.date) - new Date(b.date));
+    return news;
   }
 
-  if (sortBerita) {
-    sortBerita.addEventListener('change', function () {
-      const berita = getNewsList();
-
-      if (this.value === 'terbaru') {
-        berita.sort((a, b) => new Date(b.date) - new Date(a.date));
-      } else if (this.value === 'terlama') {
-        berita.sort((a, b) => new Date(a.date) - new Date(b.date));
-      }
-
-      renderBerita(berita);
+  function renderPagination(totalPages) {
+    if (!paginationBerita) return;
+    if (totalPages <= 1) {
+      paginationBerita.innerHTML = '';
+      return;
+    }
+    let buttons = '';
+    for (let page = 1; page <= totalPages; page += 1) {
+      buttons += `<button type="button" class="news-page-button${page === halamanBeritaAktif ? ' active' : ''}" data-news-page="${page}" aria-current="${page === halamanBeritaAktif ? 'page' : 'false'}">${page}</button>`;
+    }
+    paginationBerita.innerHTML = `<div class="news-page-controls"><button type="button" class="news-page-button" data-news-page="${halamanBeritaAktif - 1}" ${halamanBeritaAktif === 1 ? 'disabled' : ''} aria-label="Halaman sebelumnya"><i class="bi bi-chevron-left"></i></button>${buttons}<button type="button" class="news-page-button" data-news-page="${halamanBeritaAktif + 1}" ${halamanBeritaAktif === totalPages ? 'disabled' : ''} aria-label="Halaman berikutnya"><i class="bi bi-chevron-right"></i></button></div><p class="news-page-count">Halaman ${halamanBeritaAktif} dari ${totalPages}</p>`;
+    paginationBerita.querySelectorAll('[data-news-page]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const nextPage = Number(button.dataset.newsPage);
+        if (nextPage < 1 || nextPage > totalPages || nextPage === halamanBeritaAktif) return;
+        halamanBeritaAktif = nextPage;
+        renderBerita(getFilteredNews());
+        const listing = document.getElementById('daftarBerita');
+        if (listing) listing.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     });
   }
 
+  function renderBerita(list) {
+    if (!containerBerita) return;
+    const totalPages = Math.max(1, Math.ceil(list.length / beritaPerHalaman));
+    if (halamanBeritaAktif > totalPages) halamanBeritaAktif = totalPages;
+    const start = (halamanBeritaAktif - 1) * beritaPerHalaman;
+    const pageItems = list.slice(start, start + beritaPerHalaman);
+
+    if (!pageItems.length) {
+      containerBerita.innerHTML = '<div class="col-12"><div class="news-empty-state"><i class="bi bi-search"></i><h3>Belum ada berita di kategori ini</h3><p>Coba pilih kategori lainnya untuk melihat berita dan kegiatan KSR.</p></div></div>';
+      renderPagination(0);
+      return;
+    }
+
+    containerBerita.innerHTML = pageItems.map((berita, index) => `
+      <div class="col-md-6 col-xl-4 berita-item" data-date="${berita.date}" data-aos="fade-up" data-aos-delay="${(index % 3) * 80}">
+        <article class="news-card h-100 shadow-sm">
+          <img src="${escapeHtml(berita.gambar)}" class="card-img-top" alt="${escapeHtml(berita.judul)}" loading="lazy" />
+          <div class="card-body d-flex flex-column p-4">
+            <div class="news-card-meta"><small>${escapeHtml(berita.tanggal)}</small><span class="news-category-pill">${escapeHtml(berita.kategori || 'Kegiatan')}</span></div>
+            <h5 class="mt-3">${escapeHtml(berita.judul)}</h5>
+            <p class="text-muted">${escapeHtml(berita.ringkasan)}</p>
+            <a class="btn btn-danger btn-sm mt-auto align-self-start" href="detail-kegiatan.php?id=${encodeURIComponent(berita.id)}">Baca Selengkapnya <i class="bi bi-arrow-right ms-1"></i></a>
+          </div>
+        </article>
+      </div>`).join('');
+
+    renderPagination(totalPages);
+    if (window.AOS) AOS.refresh();
+  }
+
+  function populateNewsDetail() {
+    if (!newsDetailContent) return;
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const berita = id && dataBerita[id];
+    if (!berita) {
+      newsDetailContent.innerHTML = '<div class="news-empty-state"><i class="bi bi-file-earmark-x"></i><h2>Berita tidak ditemukan</h2><p>Artikel yang dicari tidak tersedia di data front end saat ini.</p><a class="btn btn-danger mt-2" href="berita-kegiatan.php">Kembali ke daftar berita</a></div>';
+      return;
+    }
+    document.title = berita.judul + ' | KSR PMI UNPAS';
+    newsDetailContent.innerHTML = `<div class="news-detail-meta"><span class="news-category-pill">${escapeHtml(berita.kategori || 'Kegiatan')}</span><time datetime="${escapeHtml(berita.date)}">${escapeHtml(berita.tanggal)}</time></div><h1 class="news-detail-title">${escapeHtml(berita.judul)}</h1><p class="news-detail-summary">${escapeHtml(berita.ringkasan)}</p><img class="news-detail-image" src="${escapeHtml(berita.gambar)}" alt="${escapeHtml(berita.judul)}"><div class="news-detail-copy">${berita.konten}</div><div class="news-detail-footer"><a class="btn btn-outline-danger" href="berita-kegiatan.php"><i class="bi bi-arrow-left me-1"></i>Kembali ke Berita & Kegiatan</a></div>`;
+  }
+
+  populateNewsDetail();
+  if (containerBerita) renderBerita(getFilteredNews());
+  [sortBerita, filterKategoriBerita].forEach((control) => {
+    if (!control) return;
+    control.addEventListener('change', () => {
+      halamanBeritaAktif = 1;
+      renderBerita(getFilteredNews());
+    });
+  });
 
   // Angka anggota dikelola manual di sini. Ganti dengan data resmi saat tersedia.
   const strukturMemberCount = { aktif: 24, nonaktif: 8 };
@@ -249,7 +284,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const modalFotoKedua = document.getElementById('strukturModalFotoKedua');
 
       document.getElementById('strukturModalNama').textContent = nama;
-      document.getElementById('strukturModalJabatan').textContent = jabatan;
+      const roleEl = document.getElementById('strukturModalJabatan');
+      if (roleEl) roleEl.textContent = jabatan;
       document.getElementById('strukturModalBidang').textContent = jabatan;
       document.getElementById('strukturModalBio').textContent = profil.bio || 'Informasi biodata lebih lanjut belum ditambahkan.';
       modalFoto.src = gambar;
@@ -270,12 +306,24 @@ document.addEventListener('DOMContentLoaded', function () {
       history.scrollRestoration = 'manual';
     }
 
-    // Hanya reset posisi/fragment ketika halaman beranda sedang dibuka.
-    if (document.getElementById('beranda')) {
+    // Pertahankan anchor yang diminta (mis. #birokrasi); reset hanya saat homepage dibuka tanpa tujuan section.
+    if (document.getElementById('beranda') && (!window.location.hash || window.location.hash === '#beranda')) {
       window.scrollTo({ top: 0, behavior: 'instant' });
-      if (!window.location.hash || window.location.hash === '#beranda') {
-        history.replaceState(null, null, window.location.pathname + '#beranda');
-      }
+      if (!window.location.hash) history.replaceState(null, null, window.location.pathname + '#beranda');
+    }
+
+    // Tombol PIC dari halaman layanan dapat membuka profil terkait dari halaman utama.
+    // Parameter pic hanya dipakai sekali; hapus dari URL supaya refresh/F5 tidak
+    // membuka kembali popup profil yang sama secara otomatis. Hash section tetap dipertahankan.
+    const currentUrl = new URL(window.location.href);
+    const requestedPic = currentUrl.searchParams.get('pic');
+    if (requestedPic) {
+      currentUrl.searchParams.delete('pic');
+      const cleanedUrl = currentUrl.pathname + (currentUrl.search ? currentUrl.search : '') + currentUrl.hash;
+      window.history.replaceState(window.history.state, document.title, cleanedUrl);
+
+      const trigger = Array.from(document.querySelectorAll('.struktur-trigger')).find((item) => item.dataset.nama === requestedPic);
+      if (trigger) window.setTimeout(() => trigger.click(), 180);
     }
   });
 
@@ -318,6 +366,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       const profileTrigger = Array.from(document.querySelectorAll('.struktur-trigger')).find((item) => item.dataset.nama === name);
       if (!profileTrigger) {
+        if (document.body.classList.contains('service-detail-page') && name) {
+          window.location.href = '../index.php?pic=' + encodeURIComponent(name) + '#struktur';
+          return;
+        }
         showLayananInfo(this, role, 'Profil pengurus untuk layanan ini belum tersedia pada daftar struktur organisasi.');
         return;
       }

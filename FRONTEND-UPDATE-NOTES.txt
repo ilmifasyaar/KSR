@@ -1,20 +1,29 @@
-Pembaruan Front End KSR PMI UNPAS
+PEMBARUAN FRONT END KSR PMI UNPAS — 24 OKTOBER 2026
 
-Yang diterapkan:
-- Navbar transparan di area beranda dan berubah menjadi abu-abu lembut saat halaman digulir.
-- Tombol Gabung Sekarang menuju tautan formulir resmi yang sudah digunakan project.
-- Ringkasan Tentang di beranda dengan halaman detail tentang sejarah, Dedemis, nilai, dan regenerasi.
-- Tombol More Information menuju halaman terpisah Berita & Kegiatan.
-- Empat kartu Birokrasi: Media Partner, PPGD, Pelatihan PPGD, dan Peminjaman Barang.
-- Modal ringkas untuk tiap layanan dan halaman detail masing-masing layanan.
-- Tampilan responsif untuk halaman tambahan dan modal.
-- Mempertahankan struktur profil pengurus dan panel status anggota yang sudah ada.
+Lingkup pengerjaan
+- Front end saja. Tidak ada perubahan pada backend PHP, database, autentikasi, atau panel admin.
+- Layout utama Beranda dan background hero dipertahankan. Tombol Gabung Sekarang menggunakan tautan Google Form yang sudah ada di project.
+- Navbar awal transparan dan berubah menjadi abu-abu lembut saat scroll. Anchor navbar pada halaman utama/detail diarahkan ke section yang sesuai dan hash #birokrasi tidak lagi direset ke posisi teratas.
+- Tentang memiliki halaman detail terpisah: sejarah, bagian arsip Dedemis (masih menunggu daftar resmi), dan nilai/regenerasi.
+- Struktur organisasi mempertahankan modal biodata dua foto, dan judul jabatan tidak diduplikasi tepat di bawah nama. Panel status anggota tetap dikelola manual di assets/js/script.js (nilai contoh: 24 aktif, 8 nonaktif; sesuaikan sebelum dipublikasikan).
+- Birokrasi memiliki empat layanan terpisah: Media Partner, PPGD, Pelatihan PPGD, dan Peminjaman Barang. Modal ringkas menyediakan Penanggung Jawab, Hubungi Penanggung Jawab, dan Baca Selengkapnya.
+- Semua halaman detail layanan menggunakan pola yang sama: informasi/persyaratan di bagian atas, service-contact-card dengan tombol PIC dan WhatsApp, lalu dokumentasi di section bawah.
+- Media Partner memiliki pratinjau desain profil Instagram yang tertaut ke @ksrunpas dan contoh poster ilustratif yang menunjukkan lokasi logo KSR. Pratinjau itu BUKAN screenshot Instagram asli; ganti panel pratinjau di birokrasi/media-partner.php dengan screenshot aktual dari akun resmi saat asetnya tersedia.
+- PPGD dan Pelatihan PPGD memiliki carousel responsif. Foto yang dipakai sementara diambil dari aset dokumentasi yang telah ada; ganti dengan dokumentasi spesifik tiap layanan jika tersedia.
+- Peminjaman Barang memakai grid katalog responsif dengan 4 kartu template. Untuk menambah item dari kode, duplikasikan elemen .inventory-card di birokrasi/peminjaman-barang.php; CSS grid menata ulang kartu otomatis. Nama, harga, durasi, dan foto saat ini masih placeholder. Admin belum dapat menambahkan item lewat panel karena fungsi tersebut membutuhkan backend dan sengaja berada di luar lingkup.
+- Tombol More Information membuka halaman Berita & Kegiatan terpisah. Daftar berita front end dilengkapi kategori, pengurutan, pagination, dan halaman detail per berita. Data masih disimpan secara statis di assets/js/script.js; pembaruan via admin belum terhubung karena backend tidak diubah.
+- Menu Kegiatan pada navbar halaman tambahan kembali ke section #kegiatan di beranda. More Information tetap untuk masuk ke halaman berita terpisah.
 
-Batasan data saat ini:
-- Berita & Kegiatan masih menggunakan data front end yang tertanam di assets/js/script.js. Penyimpanan dan pengelolaan dari panel admin memerlukan pekerjaan backend terpisah.
-- Nama PIC dan nomor WhatsApp PIC per layanan belum dikonfirmasi dalam data project, sehingga tombol menampilkan informasi bahwa data resmi perlu dilengkapi daripada memakai kontak yang belum pasti.
-- Daftar nama Dedemis/periode dan poster resmi Birokrasi perlu dimasukkan setelah aset/data resminya tersedia. Halaman layanan sudah disiapkan sebagai tempat tampilnya informasi tersebut.
+Konfigurasi yang perlu dilengkapi sebelum publikasi
+1. Ganti pratinjau profil pada birokrasi/media-partner.php dengan screenshot Instagram resmi jika ingin menggunakan tangkapan layar asli.
+2. Ganti gambar carousel PPGD/pelatihan dengan dokumentasi resmi layanan yang sesuai.
+3. Isi foto, nama, tarif, dan durasi inventaris pada birokrasi/peminjaman-barang.php.
+4. Isi nomor PIC resmi di objek birokrasiPICWhatsapp dalam assets/js/script.js. Nomor saat ini sengaja kosong agar pengguna tidak diarahkan ke kontak yang salah.
+5. Lengkapi data PIC PPGD dan peminjaman barang pada atribut data-pic-nama di index.php dan halaman layanan ketika nama resminya sudah dikonfirmasi.
+6. Lengkapi daftar dan periode Dedemis pada tentang.php setelah data resmi diterima.
+7. Perbarui jumlah anggota aktif/nonaktif di assets/js/script.js sesuai data resmi.
 
-Berkas utama yang disesuaikan: index.php, assets/css/style.css, assets/js/script.js.
-Berkas halaman baru: tentang.php, berita-kegiatan.php, dan birokrasi/*.php.
-Tidak ada perubahan backend/database/admin sebagai bagian dari pekerjaan front-end ini.
+Berkas utama yang disesuaikan: index.php, tentang.php, berita-kegiatan.php, detail-kegiatan.php, birokrasi/*.php, assets/css/style.css, assets/js/script.js.
+
+Perbaikan tambahan (24 Oktober 2026):
+- Memperbaiki popup Penanggung Jawab yang terbuka kembali setelah refresh/F5. Parameter URL `pic` sekarang digunakan sekali lalu dihapus dengan history.replaceState, sedangkan hash section seperti #struktur tetap dipertahankan.

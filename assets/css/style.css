@@ -1244,3 +1244,159 @@ section {
   .news-page-toolbar .news-filter { width: 100%; max-width: 100%; }
   .dedemis-empty-state { padding: 28px 20px; }
 }
+
+/* ================= FINAL FRONT-END PASS: Birokrasi, katalog, berita ================= */
+html { scroll-padding-top: 88px; }
+section { scroll-margin-top: 88px; }
+.hero-actions .btn { font-weight: 750; border-radius: 12px; padding-top: 13px; padding-bottom: 13px; }
+
+/* Aksi pada modal layanan */
+.layanan-modal-actions { display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
+.layanan-primary-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; width: 100%; }
+.layanan-primary-actions .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 12px; white-space: normal; }
+.layanan-more-link { display: flex; width: 100%; justify-content: center; align-items: center; min-height: 42px; font-weight: 700; }
+
+/* Halaman detail layanan berbagi struktur yang sama */
+.service-primary-section { background: #fff; }
+.service-detail-layout { grid-template-columns: minmax(0, 1.4fr) minmax(290px, .72fr); }
+.service-aside { min-width: 0; }
+.service-contact-card { background: #fff; }
+.service-contact-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin-top: 12px; }
+.service-contact-actions .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 10px 12px; white-space: normal; font-size: .9rem; font-weight: 700; }
+.service-contact-card ul { margin-bottom: 16px; }
+.service-contact-card > .btn { min-height: 44px; font-weight: 700; }
+.service-documentation-section { background: #f8f7f7; border-top: 1px solid #eee8e9; }
+.service-doc-heading { max-width: 760px; margin: 0 auto 34px; text-align: center; }
+.service-doc-heading h2 { margin: 8px 0 12px; color: #2d272a; font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 850; letter-spacing: -.025em; }
+.service-doc-heading p { margin: 0; color: #766d72; line-height: 1.75; }
+.service-media-documentation { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr); gap: 24px; align-items: stretch; }
+.instagram-profile-panel, .sample-publication-panel { min-width: 0; padding: clamp(16px, 2.4vw, 26px); border: 1px solid #eee1e3; border-radius: 20px; background: #fff; box-shadow: 0 12px 30px rgba(47, 24, 29, .045); }
+.service-doc-card-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.service-doc-index { display: grid; place-items: center; flex: 0 0 38px; width: 38px; height: 38px; border-radius: 12px; color: #b30000; background: #fff0f1; font-size: .8rem; font-weight: 850; }
+.service-doc-overline { color: #a23a45; font-size: .65rem; font-weight: 850; letter-spacing: .13em; }
+.service-doc-card-heading h3 { margin: 3px 0 0; color: #30272b; font-size: 1.15rem; font-weight: 800; }
+.instagram-profile-preview { overflow: hidden; border: 1px solid #eae5e6; border-radius: 14px; background: #fff; }
+.instagram-profile-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 46px; padding: 10px 14px; border-bottom: 1px solid #f0ecec; color: #2c272a; }
+.instagram-profile-top strong { font-size: .94rem; }
+.instagram-back-mark { color: #4b4549; }
+.instagram-profile-main { display: flex; align-items: center; gap: clamp(13px, 2.2vw, 26px); padding: clamp(16px, 2.8vw, 28px); }
+.instagram-profile-avatar { flex: 0 0 clamp(68px, 10vw, 104px); width: clamp(68px, 10vw, 104px); height: clamp(68px, 10vw, 104px); padding: 5px; border: 1px solid #d9d2d4; border-radius: 50%; object-fit: contain; background: #fff; }
+.instagram-profile-summary { display: grid; gap: 5px; min-width: 0; color: #60575c; font-size: .83rem; line-height: 1.45; }
+.instagram-profile-summary strong { color: #272126; font-size: .98rem; }
+.instagram-profile-action-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; padding: 0 clamp(16px, 2.8vw, 28px) 18px; }
+.instagram-profile-action-row .btn { font-weight: 700; }
+.instagram-profile-status { color: #478361; font-size: .72rem; font-weight: 700; }
+.instagram-profile-tabs { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #eee9ea; color: #8b8085; text-align: center; font-size: .76rem; }
+.instagram-profile-tabs span { padding: 11px 4px; }
+.instagram-profile-tabs .active { border-bottom: 2px solid #b30000; color: #b30000; }
+.instagram-profile-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #f4f1f2; }
+.profile-grid-tile { display: grid; place-items: center; align-content: center; gap: 7px; min-width: 0; aspect-ratio: 1 / 1; padding: 8px; color: #fff; font-size: clamp(.55rem, 1vw, .75rem); font-weight: 750; text-align: center; }
+.profile-grid-tile img { width: 72%; height: 72%; object-fit: contain; }
+.profile-grid-logo { background: #fff; }
+.profile-grid-action { background: linear-gradient(140deg, #9c1624, #d94a53); }
+.profile-grid-training { background: linear-gradient(140deg, #4e3b50, #a76c81); }
+.profile-grid-tile i { font-size: clamp(1.3rem, 3vw, 2.2rem); }
+.service-doc-caption { margin: 12px 2px 0; color: #887e83; font-size: .76rem; line-height: 1.65; }
+.sample-event-poster { overflow: hidden; max-width: 460px; margin: 0 auto; border: 1px solid #ead5d8; border-radius: 15px; background: #fff; box-shadow: 0 10px 28px rgba(109, 18, 31, .08); }
+.sample-poster-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 16px; color: #fff; background: #9f1422; font-size: .68rem; font-weight: 850; letter-spacing: .1em; }
+.sample-poster-topline i { font-size: 1.15rem; }
+.sample-poster-art { position: relative; overflow: hidden; padding: clamp(20px, 3vw, 32px) 18px 22px; color: #fff; text-align: center; background: radial-gradient(circle at 80% 20%, rgba(255,255,255,.23), transparent 23%), linear-gradient(145deg, #bd2432, #7f0e19); }
+.sample-poster-art::after { position: absolute; right: -30px; bottom: -55px; width: 170px; height: 170px; border: 24px solid rgba(255,255,255,.09); border-radius: 50%; content: ''; }
+.sample-poster-eyebrow { position: relative; z-index: 1; display: inline-block; padding: 6px 9px; border: 1px solid rgba(255,255,255,.45); border-radius: 30px; font-size: .59rem; font-weight: 850; letter-spacing: .12em; }
+.sample-poster-art h4 { position: relative; z-index: 1; margin: 17px 0 8px; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 900; line-height: 1.05; }
+.sample-poster-art p { position: relative; z-index: 1; margin: 0; font-size: .85rem; }
+.sample-poster-event-icon { position: relative; z-index: 1; display: grid; place-items: center; width: 72px; height: 72px; margin: 22px auto 0; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; background: rgba(255,255,255,.12); font-size: 2rem; }
+.sample-poster-info { padding: 12px 15px; color: #6e6267; background: #fff7f7; font-size: .7rem; text-align: center; }
+.sample-poster-brand { display: flex; align-items: center; gap: 11px; padding: 15px; border-top: 1px solid #f1e4e6; }
+.sample-poster-brand img { flex: 0 0 52px; width: 52px; height: 52px; object-fit: contain; }
+.sample-poster-brand div { display: grid; gap: 4px; min-width: 0; }
+.sample-poster-brand strong { color: #3b3034; font-size: .77rem; line-height: 1.4; }
+.sample-poster-brand small { color: #81777b; font-size: .67rem; line-height: 1.45; }
+.service-gallery-shell { max-width: 980px; margin: 0 auto; overflow: hidden; border: 1px solid #eadfe1; border-radius: 20px; background: #fff; box-shadow: 0 15px 38px rgba(54, 27, 32, .07); }
+.service-gallery-carousel { background: #221b1e; }
+.service-gallery-carousel .carousel-inner { height: clamp(300px, 55vw, 610px); }
+.service-gallery-carousel .carousel-item { height: 100%; }
+.service-gallery-image { width: 100%; height: 100%; object-fit: contain; background: #211b1e; }
+.service-gallery-carousel .carousel-control-prev, .service-gallery-carousel .carousel-control-next { width: 10%; }
+.service-gallery-carousel .carousel-control-prev-icon, .service-gallery-carousel .carousel-control-next-icon { width: 2.7rem; height: 2.7rem; border-radius: 50%; background-color: rgba(30, 23, 26, .55); background-size: 45%; }
+.service-gallery-caption { right: 0; left: 0; bottom: 0; padding: 54px 30px 31px; text-align: left; background: linear-gradient(transparent, rgba(0,0,0,.85)); }
+.service-gallery-caption strong { font-size: clamp(1rem, 2vw, 1.25rem); }
+.service-gallery-caption p { max-width: 700px; margin: 6px 0 0; color: rgba(255,255,255,.83); font-size: .82rem; }
+.service-gallery-carousel .carousel-indicators { margin-bottom: 11px; }
+.service-gallery-helper { margin: 16px auto 0; color: #82777d; font-size: .8rem; text-align: center; }
+
+/* Peminjaman Barang: kartu-kartu bersifat statis/front-end, grid otomatis responsif saat kartu ditambah. */
+.inventory-catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 22px; align-items: stretch; }
+.inventory-card { overflow: hidden; min-width: 0; height: 100%; border: 1px solid #eee1e3; border-radius: 18px; background: #fff; box-shadow: 0 10px 28px rgba(47, 24, 29, .045); transition: transform .22s ease, box-shadow .22s ease; }
+.inventory-card:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(47, 24, 29, .09); }
+.inventory-image-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 190px; aspect-ratio: 4 / 3; padding: 18px; color: #a53d49; background: linear-gradient(140deg, #fceff0, #f5f1f2); text-align: center; }
+.inventory-image-placeholder i { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 18px; color: #b30000; background: #fff; font-size: 1.6rem; box-shadow: 0 7px 17px rgba(120, 20, 34, .08); }
+.inventory-image-placeholder span { color: #8b747a; font-size: .76rem; font-weight: 700; }
+.inventory-card-body { display: flex; flex-direction: column; gap: 7px; padding: 20px; }
+.inventory-number { color: #b04450; font-size: .65rem; font-weight: 850; letter-spacing: .14em; }
+.inventory-card-body h3 { min-height: 2.8em; margin: 2px 0 3px; color: #2e272b; font-size: 1.08rem; font-weight: 850; line-height: 1.4; }
+.inventory-price-label { color: #80747a; font-size: .76rem; }
+.inventory-price { color: #b30000; font-size: 1.45rem; font-weight: 900; line-height: 1.2; }
+.inventory-detail-row { display: flex; align-items: center; gap: 11px; margin-top: 12px; padding-top: 13px; border-top: 1px solid #f0e7e9; color: #b14550; }
+.inventory-detail-row > i { font-size: 1.15rem; }
+.inventory-detail-row div { display: grid; gap: 3px; }
+.inventory-detail-row span { color: #877b80; font-size: .7rem; }
+.inventory-detail-row strong { color: #41383d; font-size: .82rem; }
+.inventory-edit-note { color: #81777c; font-size: .78rem; line-height: 1.7; }
+.inventory-edit-note code { color: #a31a29; }
+
+/* Berita: kategori, pagination, dan halaman detail tersendiri */
+.news-filters { display: grid; grid-template-columns: repeat(2, minmax(160px, 1fr)); gap: 12px; min-width: min(100%, 380px); }
+.news-filter { min-width: 0; }
+.news-card-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; color: #81777c; }
+.news-category-pill { display: inline-flex; align-items: center; width: fit-content; padding: 5px 9px; border-radius: 100px; color: #a12b39; background: #fff0f1; font-size: .68rem; font-weight: 800; }
+.news-card .card-img-top { height: 225px; object-fit: cover; }
+.news-pagination { display: grid; justify-items: center; gap: 10px; }
+.news-page-controls { display: flex; justify-content: center; flex-wrap: wrap; gap: 7px; }
+.news-page-button { display: inline-grid; place-items: center; min-width: 40px; min-height: 40px; padding: 7px 12px; border: 1px solid #ead7da; border-radius: 11px; color: #66575d; background: #fff; font-weight: 750; }
+.news-page-button:hover, .news-page-button.active { border-color: #b30000; color: #fff; background: #b30000; }
+.news-page-button:disabled { cursor: not-allowed; opacity: .4; }
+.news-page-count { margin: 0; color: #897d82; font-size: .76rem; }
+.news-empty-state { max-width: 620px; margin: 0 auto; padding: 40px 20px; border: 1px dashed #e6d4d7; border-radius: 18px; color: #786b71; text-align: center; }
+.news-empty-state > i { display: block; margin-bottom: 12px; color: #b63c49; font-size: 2rem; }
+.news-empty-state h2, .news-empty-state h3 { color: #2f282c; font-size: 1.35rem; font-weight: 850; }
+.news-empty-state p { margin-bottom: 0; line-height: 1.75; }
+.news-detail-article { max-width: 880px; margin: 0 auto; }
+.news-detail-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; color: #82767c; font-size: .82rem; }
+.news-detail-title { margin: 16px 0 14px; color: #2c2529; font-size: clamp(1.9rem, 4.4vw, 3.25rem); font-weight: 900; line-height: 1.12; letter-spacing: -.035em; }
+.news-detail-summary { margin: 0 0 26px; color: #756b70; font-size: 1.08rem; line-height: 1.75; }
+.news-detail-image { display: block; width: 100%; max-height: 540px; margin-bottom: 30px; border-radius: 18px; object-fit: cover; background: #f2eeee; }
+.news-detail-copy { color: #4c4449; font-size: 1rem; line-height: 1.9; }
+.news-detail-copy p { margin: 0 0 1.15rem; }
+.news-detail-footer { margin-top: 34px; padding-top: 22px; border-top: 1px solid #eee3e5; }
+
+@media (max-width: 991.98px) {
+  .service-detail-layout { grid-template-columns: minmax(0, 1fr); }
+  .service-media-documentation { grid-template-columns: minmax(0, 1fr); }
+  .instagram-profile-panel, .sample-publication-panel { max-width: 700px; width: 100%; margin: 0 auto; }
+  .inventory-catalog-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+  .news-page-toolbar { align-items: stretch; }
+  .news-filters { width: 100%; min-width: 0; }
+}
+@media (max-width: 575.98px) {
+  html { scroll-padding-top: 78px; }
+  section { scroll-margin-top: 78px; }
+  .layanan-primary-actions { grid-template-columns: minmax(0, 1fr); }
+  .service-contact-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .service-contact-actions .btn { padding: 10px 8px; font-size: .78rem; }
+  .service-gallery-carousel .carousel-inner { height: min(112vw, 450px); }
+  .service-gallery-caption { padding: 48px 22px 27px; }
+  .service-gallery-caption p { font-size: .72rem; }
+  .service-gallery-carousel .carousel-control-prev, .service-gallery-carousel .carousel-control-next { width: 15%; }
+  .service-gallery-carousel .carousel-control-prev-icon, .service-gallery-carousel .carousel-control-next-icon { width: 2rem; height: 2rem; }
+  .news-filters { grid-template-columns: minmax(0, 1fr); }
+  .news-card .card-img-top { height: 205px; }
+  .instagram-profile-main { align-items: flex-start; }
+  .instagram-profile-summary { font-size: .75rem; }
+  .instagram-profile-summary strong { font-size: .88rem; }
+  .sample-poster-brand { align-items: flex-start; }
+  .inventory-catalog-grid { grid-template-columns: minmax(0, 1fr); }
+  .inventory-image-placeholder { min-height: 170px; }
+}
+
+.news-page #daftarBerita { scroll-margin-top: 100px; }
